@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float speed;
     float horizontal;
     float vertical;
+    Vector2 previousInput;
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +34,25 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        if(horizontal != 0 && vertical !=0)
+        {
+            if(previousInput == Vector2.right || previousInput == -Vector2.right)
+            {
+                vertical = 0;
+            }
+            else
+            {
+                horizontal = 0;
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         if (canControl)
         {
+            previousInput = new Vector2(horizontal, vertical);
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
             body.velocity = movement;
         }
