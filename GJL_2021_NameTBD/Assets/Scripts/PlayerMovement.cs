@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float walkSpeed;
     [SerializeField] float runSpeed;
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer rend;
 
     public bool canControl = false;
     public Rigidbody2D body;
@@ -18,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -55,7 +59,46 @@ public class PlayerMovement : MonoBehaviour
             previousInput = new Vector2(horizontal, vertical);
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
             body.velocity = movement;
+
+            SwitchAnimation(new Vector2(horizontal, vertical));
         }
     }
 
+    public void SwitchAnimation(Vector2 direction)
+    {
+        if (body.velocity.magnitude > 0)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
+
+        switch (direction.x)
+        {
+            case -1:
+                animator.SetInteger("Direction", 1);
+                rend.flipX = false;
+                break;
+            case 1:
+                animator.SetInteger("Direction", 1);
+                rend.flipX = true;
+                break;
+        }
+
+        switch (direction.y)
+        {
+            case -1:
+                animator.SetInteger("Direction", 0);
+                rend.flipX = false;
+                break;
+            case 1:
+                animator.SetInteger("Direction", 2);
+                rend.flipX = false;
+                break;
+        }
+
+
+    }
 }
