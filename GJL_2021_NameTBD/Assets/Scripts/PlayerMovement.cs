@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed;
 
     public bool canControl = false;
-    Rigidbody2D body;
+    public Rigidbody2D body;
     float speed;
     float horizontal;
     float vertical;

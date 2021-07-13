@@ -9,7 +9,6 @@ public class ConveyorBelt : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] bool horizontal;
 
-
     Vector2 direction;
     PlayerMovement playerMovement;
     Rigidbody2D body;
@@ -53,5 +52,6 @@ public class ConveyorBelt : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         playerMovement.canControl = true;
+        body.velocity = Vector2.zero;
     }
 }
