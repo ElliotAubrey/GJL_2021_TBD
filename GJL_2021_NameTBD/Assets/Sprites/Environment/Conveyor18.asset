@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Conveyor18
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -3476429034813475992, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: -3856295658640520774, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -3476429034813475992, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   m_MinSpeed: 2
   m_MaxSpeed: 2
