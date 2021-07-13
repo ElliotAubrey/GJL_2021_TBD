@@ -7,6 +7,8 @@ public class ConveyorBelt : MonoBehaviour
     [SerializeField] Transform start;
     [SerializeField] Transform end;
     [SerializeField] float speed;
+    [SerializeField] Sprite[] arrows;
+    [SerializeField] SpriteRenderer rend;
 
     public bool horizontal;
 
@@ -14,22 +16,52 @@ public class ConveyorBelt : MonoBehaviour
     PlayerMovement playerMovement;
     PlayerPower playerPower;
 
+    public bool swap;
+    [SerializeField] Transform archivedStart, archivedEnd;
 
     private void Start()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerPower = FindObjectOfType<PlayerPower>();
+        ForceSwap();
     }
     private void Update()
     {
         direction = (end.transform.position - start.transform.position).normalized;
+
+        switch (horizontal)
+        {
+            case true:
+                switch (swap)
+                {
+                    case true:
+                        ChangeSprite(0);
+                        break;
+                    case false:
+                        ChangeSprite(1);
+                        break;
+                }
+                break;
+
+            case false:
+                switch (swap)
+                {
+                    case true:
+                        ChangeSprite(2);
+                        break;
+                    case false:
+                        ChangeSprite(3);
+                        break;
+                }
+                break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(horizontal )
+        if(horizontal == true)
         {
-            collision.gameObject.transform.position = new Vector3(collision.gameObject.transform.position.x, transform.position.y, collision.gameObject.transform.position.z);
+            collision.gameObject.transform.position = new Vector3(collision.gameObject.transform.position.x, transform.position.y + 0.2f, collision.gameObject.transform.position.z);
         }
         else
         {
@@ -61,9 +93,44 @@ public class ConveyorBelt : MonoBehaviour
 
     public void Switch()
     {
+        swap = !swap;
         Transform mid = end;
 
         end = start;
         start = mid;
+    }
+
+    public void ForceSwap()
+    {
+        switch (swap)
+        {
+            case true:
+                start = archivedEnd;
+                end = archivedStart;
+                break;
+            case false:
+                start = archivedStart;
+                end = archivedEnd;
+                break;
+        }
+    }
+
+    public void ChangeSprite(int direction)
+    {
+        switch (direction)
+        {
+            case 0:
+                rend.sprite = arrows[0];
+                break;
+            case 1:
+                rend.sprite = arrows[1];
+                break;
+            case 2:
+                rend.sprite = arrows[2];
+                break;
+            case 3:
+                rend.sprite = arrows[3];
+                break;
+        }
     }
 }
