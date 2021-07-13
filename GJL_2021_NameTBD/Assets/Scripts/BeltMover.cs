@@ -57,7 +57,6 @@ public class BeltMover : MonoBehaviour
         }
         
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         prompt.gameObject.SetActive(false);
