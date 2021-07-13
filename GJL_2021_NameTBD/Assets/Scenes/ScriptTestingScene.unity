@@ -1318,6 +1318,11 @@ MonoBehaviour:
   - {fileID: 563679844}
   - {fileID: 1824834393}
   horizontal: 0
+  lever:
+  - {fileID: 3476129566930165887, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: -7151950276075599682, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  rend: {fileID: 0}
+  on: 0
 --- !u!212 &1344767751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1358,8 +1363,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.8155527, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 3476129566930165887, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
