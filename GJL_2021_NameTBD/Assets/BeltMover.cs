@@ -9,6 +9,15 @@ public class BeltMover : MonoBehaviour
     [SerializeField] ConveyorBelt[] belts;
     [SerializeField] bool horizontal;
 
+    [SerializeField] Sprite[] lever;
+    [SerializeField] SpriteRenderer rend;
+    [SerializeField] bool on;
+
+    void Start()
+    {
+        rend = GetComponent<SpriteRenderer>();
+    }
+
     int cooldown = 0;
     private void FixedUpdate()
     {
@@ -16,7 +25,18 @@ public class BeltMover : MonoBehaviour
         {
             cooldown--;
         }
-    }
+
+        switch (on)
+        {
+            case true:
+                rend.sprite = lever[0];
+                break;
+            case false:
+                rend.sprite = lever[1];
+                break;
+        }
+;    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         prompt.gameObject.SetActive(true);
@@ -28,6 +48,7 @@ public class BeltMover : MonoBehaviour
         if (Input.GetKey(KeyCode.F) && cooldown == 0)
         {
             Debug.Log("Switched");
+            on = !on;
             for(int i = 0; i < belts.Length; i++)
             {
                 belts[i].Switch();
