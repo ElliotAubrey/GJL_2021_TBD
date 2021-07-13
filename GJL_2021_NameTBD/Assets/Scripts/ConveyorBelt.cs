@@ -7,12 +7,19 @@ public class ConveyorBelt : MonoBehaviour
     [SerializeField] Transform start;
     [SerializeField] Transform end;
     [SerializeField] float speed;
-    [SerializeField] bool horizontal;
+
+    public bool horizontal;
 
     Vector2 direction;
     PlayerMovement playerMovement;
-    Rigidbody2D body;
+    PlayerPower playerPower;
 
+
+    private void Start()
+    {
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerPower = FindObjectOfType<PlayerPower>();
+    }
     private void Update()
     {
         direction = (end.transform.position - start.transform.position).normalized;
@@ -20,38 +27,43 @@ public class ConveyorBelt : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerMovement == null)
+        if(horizontal )
         {
-            playerMovement = collision.GetComponent<PlayerMovement>();
-            body = collision.GetComponent<Rigidbody2D>();
+            collision.gameObject.transform.position = new Vector3(collision.gameObject.transform.position.x, transform.position.y, collision.gameObject.transform.position.z);
+        }
+        else
+        {
+            collision.gameObject.transform.position = new Vector3(transform.position.x, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
         }
 
-        if (collision.tag == "Player")
-        {
-            playerMovement.canControl = false;
-            if(horizontal)
-            {
-                collision.gameObject.transform.position = new Vector3(collision.gameObject.transform.position.x, transform.position.y, collision.gameObject.transform.position.z);
-            }
-            else
-            {
-                collision.gameObject.transform.position = new Vector3(transform.position.x, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
-            }
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
-        {
-            playerMovement.canControl = false;
-        }
-        body.velocity = direction * speed;
+        playerMovement.canControl = false;
+        playerPower.losePower = false;
+        collision.GetComponent<Rigidbody2D>().velocity = direction * speed;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        playerMovement.canControl = true;
-        body.velocity = Vector2.zero;
+        if (collision.gameObject.tag == "Player")
+        {
+            playerPower.losePower = true;
+            if(playerPower.power > 1)
+            {
+                playerMovement.canControl = true;
+            }
+           
+        }
+        collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
+    public void Switch()
+    {
+        Transform mid = end;
+
+        end = start;
+        start = mid;
     }
 }

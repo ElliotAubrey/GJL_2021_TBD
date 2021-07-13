@@ -10,6 +10,7 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] TextMeshProUGUI batteriesUI;
 
     public int power = 100;
+    public bool losePower = true;
 
     int batteries = 1;
     PlayerMovement playerMovement;
@@ -57,7 +58,10 @@ public class PlayerPower : MonoBehaviour
 
         if (powerTimer < 1 && power > 0)
         {
-            power--;
+            if(losePower)
+            {
+                power--;
+            }
             powerTimer = 50;
         }
     }
