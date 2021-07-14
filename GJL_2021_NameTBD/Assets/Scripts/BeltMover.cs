@@ -7,7 +7,6 @@ public class BeltMover : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI prompt;
     [SerializeField] ConveyorBelt[] belts;
-    [SerializeField] bool horizontal;
 
     [SerializeField] Sprite[] lever;
     [SerializeField] SpriteRenderer rend;
@@ -47,7 +46,6 @@ public class BeltMover : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) && cooldown == 0)
         {
-            Debug.Log("Switched");
             on = !on;
             for(int i = 0; i < belts.Length; i++)
             {
