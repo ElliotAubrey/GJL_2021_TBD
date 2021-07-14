@@ -15,6 +15,6 @@ public class BatteryPickUp : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         playerPower.BatteryPickUp(amount);
-        Destroy(gameObject.transform.parent.gameObject);
+        Destroy(gameObject);
     }
 }

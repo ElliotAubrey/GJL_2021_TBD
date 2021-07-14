@@ -44,7 +44,6 @@ public class WireRandomiser : MonoBehaviour
             {
                 arrayPos -= 4;
             }
-            Debug.Log(arrayPos);
             SwapPositionsStarts(wireStartsToRandomise[i].transform, wireStartsToRandomise[arrayPos].transform);
         }
 

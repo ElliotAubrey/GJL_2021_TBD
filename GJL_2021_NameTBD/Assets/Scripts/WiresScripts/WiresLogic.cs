@@ -6,7 +6,6 @@ public class WiresLogic : MonoBehaviour
 {
     [SerializeField] WireStart wireStart;
     [SerializeField] WireEnd[] wireEnds;
-    [SerializeField] Wire[] allWires;
     [SerializeField] WiresReset wiresReset;
     [SerializeField] WireRandomiser wireRandomiser;
 
@@ -14,6 +13,7 @@ public class WiresLogic : MonoBehaviour
     bool b2 = false;
     bool b3 = false;
     bool b4 = false;
+    bool win = false;
 
     void Update()
     {
@@ -25,8 +25,9 @@ public class WiresLogic : MonoBehaviour
         if(b1 && b2 && b3 && b4)
         {
             wiresReset.Win();
+            win = true;
         }
-        else if(wireEnds[1].attached && wireEnds[2].attached && wireEnds[3].attached && wireEnds[0].attached)
+        else if(wireEnds[1].attached && wireEnds[2].attached && wireEnds[3].attached && wireEnds[0].attached && !win)
         {
             wiresReset.Reset();
             wireRandomiser.Randomise();

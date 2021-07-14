@@ -6,7 +6,6 @@ public class WireStart : MonoBehaviour
 {
     [SerializeField] Wire myWire;
     [SerializeField] Wire[] allWires;
-    [SerializeField] WireEnd[] allWireEnds;
 
     private void OnMouseOver()
     {
