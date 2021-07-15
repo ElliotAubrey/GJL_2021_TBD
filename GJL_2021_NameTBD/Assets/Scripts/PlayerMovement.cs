@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canControl)
         {
+            body.bodyType = RigidbodyType2D.Dynamic;
             previousInput = new Vector2(horizontal, vertical);
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
             body.velocity = movement;
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             SwitchAnimation(new Vector2(horizontal, vertical));
         }
     }
+
 
     public void SwitchAnimation(Vector2 direction)
     {
@@ -98,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
                 rend.flipX = false;
                 break;
         }
-
-
     }
+
 }

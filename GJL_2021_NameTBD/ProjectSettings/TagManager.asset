@@ -8,6 +8,7 @@ TagManager:
   - StrongBot
   - PressurePlate
   - StrongBotExit
+  - PushBox
   layers:
   - Default
   - TransparentFX

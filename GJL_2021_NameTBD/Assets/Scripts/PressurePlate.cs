@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    [SerializeField] float neededMass;
     [SerializeField] SpriteRenderer rend;
     [SerializeField] Sprite pressureOn, pressureOff;
-    bool open = false;
+    [SerializeField] Door[] doors;
+    bool powered = false;
 
     private void Start()
     {
@@ -16,24 +16,15 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Rigidbody2D>().mass >= neededMass && !open)
+        if (collision.gameObject.tag == "PushBox")
         {
-            open = true;
-            //open code  
+            rend.sprite = pressureOn;
+            for(int i = 0; i < doors.Length; i++)
+            {
+                doors[i].Open();
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(open)
-        {
-            rend.sprite = pressureOn;
-            //close code
-        }
-        else
-        {
-            rend.sprite = pressureOff;
-        }
-    }
 
 }

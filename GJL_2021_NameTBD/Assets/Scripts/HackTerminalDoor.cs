@@ -65,5 +65,8 @@ public class HackTerminalDoor : MonoBehaviour
         {
             doors[i].Close();
         }
+        complete = true;
+        playerMovement.canControl = true;
+        playerPower.losePower = true;
     }
 }

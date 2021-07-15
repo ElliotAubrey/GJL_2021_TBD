@@ -50,7 +50,7 @@ public class WiresLogic : MonoBehaviour
             {
                 if (Vector2.Distance(terminalDoors[i].transform.position, playerMovement.gameObject.transform.position) < distance)
                 {
-                    distance = Vector2.Distance(terminals[i].transform.position, playerMovement.gameObject.transform.position);
+                    distance = Vector2.Distance(terminalDoors[i].transform.position, playerMovement.gameObject.transform.position);
                     index = i;
                 }
             }

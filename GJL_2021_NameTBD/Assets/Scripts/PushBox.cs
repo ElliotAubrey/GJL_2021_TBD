@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PushBox : MonoBehaviour
 {
-    [SerializeField] float mass;
-
     SpriteRenderer spriteRenderer;
     Rigidbody2D body;
     Vector2 startPos;
@@ -16,7 +14,6 @@ public class PushBox : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         body = GetComponent<Rigidbody2D>();
         body.bodyType = RigidbodyType2D.Static;
-        body.mass = mass;
         startPos = transform.position;
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -24,7 +21,6 @@ public class PushBox : MonoBehaviour
         if(collision.gameObject.tag == "StrongBot" && !set)
         {
             body.bodyType = RigidbodyType2D.Dynamic;
-            body.mass = 1;
         }
     }
 
@@ -33,7 +29,6 @@ public class PushBox : MonoBehaviour
         if(collision.gameObject.tag == "StrongBot")
         {
             body.bodyType = RigidbodyType2D.Static;
-            body.mass = mass;
         }
     }
 
