@@ -8,10 +8,12 @@ public class WiresLogic : MonoBehaviour
     [SerializeField] WireEnd[] wireEnds;
     [SerializeField] WiresReset wiresReset;
     [SerializeField] WireRandomiser wireRandomiser;
+    [SerializeField] bool isDoor = false;
 
     PlayerMovement playerMovement;
     SpriteRenderer playerSprite;
-    HackTerminal hackTerminal;
+    HackTerminalBot hackTerminal;
+    HackTerminalDoor hackTerminalDoor;
 
     bool b1 = false;
     bool b2 = false;
@@ -26,18 +28,35 @@ public class WiresLogic : MonoBehaviour
         playerSprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
 
         //find the closest hack terminal
-        HackTerminal[] terminals = HackTerminal.FindObjectsOfType<HackTerminal>();
+        HackTerminalDoor[] terminalDoors = FindObjectsOfType<HackTerminalDoor>();
+        HackTerminalBot[] terminals = HackTerminalBot.FindObjectsOfType<HackTerminalBot>();
         float distance = 999f;
         int index = 0;
-        for(int i = 0; i < terminals.Length; i++)
+        if(!isDoor)
         {
-            if(Vector2.Distance(terminals[i].transform.position, playerMovement.gameObject.transform.position) < distance)
+            for (int i = 0; i < terminals.Length; i++)
             {
-                distance = Vector2.Distance(terminals[i].transform.position, playerMovement.gameObject.transform.position);
-                index = i;
+                if (Vector2.Distance(terminals[i].transform.position, playerMovement.gameObject.transform.position) < distance)
+                {
+                    distance = Vector2.Distance(terminals[i].transform.position, playerMovement.gameObject.transform.position);
+                    index = i;
+                }
             }
+            hackTerminal = terminals[index];
         }
-        hackTerminal = terminals[index];
+        else
+        {
+            for (int i = 0; i < terminalDoors.Length; i++)
+            {
+                if (Vector2.Distance(terminalDoors[i].transform.position, playerMovement.gameObject.transform.position) < distance)
+                {
+                    distance = Vector2.Distance(terminals[i].transform.position, playerMovement.gameObject.transform.position);
+                    index = i;
+                }
+            }
+            hackTerminalDoor = terminalDoors[index];
+        }
+       
     }
     void Update()
     {
@@ -51,7 +70,14 @@ public class WiresLogic : MonoBehaviour
             wiresReset.Win();
             win = true;
             playerMovement.canControl = true;
-            hackTerminal.Send();
+            if(!isDoor)
+            {
+                hackTerminal.Send();
+            }
+            else
+            {
+                hackTerminalDoor.Send();
+            }
             playerSprite.enabled = true;
         }
         else if(wireEnds[1].attached && wireEnds[2].attached && wireEnds[3].attached && wireEnds[0].attached && !win)

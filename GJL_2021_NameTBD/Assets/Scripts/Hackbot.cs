@@ -6,7 +6,7 @@ public class Hackbot : MonoBehaviour, IHackBot
 {
     [SerializeField] string botType;
     [SerializeField] int targetGroupLayer;
-    [SerializeField] HackTerminal hackTerminal;
+    [SerializeField] HackTerminalBot hackTerminal;
 
     
     public string GetBotType()
