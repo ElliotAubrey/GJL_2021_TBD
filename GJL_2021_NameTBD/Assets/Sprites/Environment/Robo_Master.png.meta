@@ -491,6 +491,12 @@ TextureImporter:
   - first:
       213: 5425626772121752832
     second: Robo_Master_162
+  - first:
+      213: -5217733420325809763
+    second: Robo_Master_163
+  - first:
+      213: -5267604105256962981
+    second: Robo_Master_164
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -4034,6 +4040,48 @@ TextureImporter:
       bones: []
       spriteID: 0059a249dc2bb4b40800000000000000
       internalID: 5425626772121752832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Master_163
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91dbc45913e697b0800000000000000
+      internalID: -5217733420325809763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Master_164
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54f4c8a9f5b5e6b0800000000000000
+      internalID: -5267604105256962981
       vertices: []
       indices: 
       edges: []

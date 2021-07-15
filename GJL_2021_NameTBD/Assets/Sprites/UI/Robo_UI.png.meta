@@ -23,6 +23,21 @@ TextureImporter:
   - first:
       213: -9179949632695155730
     second: Robo_UI_6
+  - first:
+      213: 4040893749449049787
+    second: Robo_UI_7
+  - first:
+      213: 2542326477033733025
+    second: Robo_UI_8
+  - first:
+      213: 2194991149709364051
+    second: Robo_UI_9
+  - first:
+      213: -5001183550135762519
+    second: Robo_UI_10
+  - first:
+      213: 3214197608597819458
+    second: Robo_UI_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -282,7 +297,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,6 +305,111 @@ TextureImporter:
       bones: []
       spriteID: ee34a3f42744a9080800000000000000
       internalID: -9179949632695155730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_UI_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 4, y: 4, z: 4, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6c10f9473241830800000000000000
+      internalID: 4040893749449049787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_UI_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 99
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab7aa60678284320800000000000000
+      internalID: 2542326477033733025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_UI_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 99
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b8d8332dc267e10800000000000000
+      internalID: 2194991149709364051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_UI_10
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 83
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a181adfe0a389ab0800000000000000
+      internalID: -5001183550135762519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_UI_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 83
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240126a02bf1b9c20800000000000000
+      internalID: 3214197608597819458
       vertices: []
       indices: 
       edges: []

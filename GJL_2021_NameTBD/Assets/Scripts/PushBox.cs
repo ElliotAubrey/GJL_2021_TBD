@@ -42,7 +42,7 @@ public class PushBox : MonoBehaviour
         if (collision.gameObject.tag == "PressurePlate")
         {
             set = true;
-            transform.position = collision.gameObject.transform.position;
+            transform.position = collision.gameObject.transform.position + new Vector3(0, 0.5f, 0);
         }
     }
 
