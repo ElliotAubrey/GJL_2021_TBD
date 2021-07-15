@@ -11,6 +11,9 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] bool triggerOnce;
 
+    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] PlayerPower playerPower;
+
     bool triggered, isPlaying;
     int amountOfText;
 
@@ -103,6 +106,9 @@ public class DialogTrigger : MonoBehaviour
     {
         textBox.gameObject.SetActive(true);
         ReadDialog();
+        playerMovement.canControl = false;
+        playerPower.losePower = false;
+        playerMovement.body.velocity = Vector2.zero;
     }
 
     public void CloseTextBox()
@@ -115,5 +121,8 @@ public class DialogTrigger : MonoBehaviour
             isPlaying = false;
             amountOfText = dialogSO.dialog.Length;
         }
+
+        playerMovement.canControl = true;
+        playerPower.losePower = true;
     }
 }
