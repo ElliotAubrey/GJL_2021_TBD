@@ -36,7 +36,9 @@ public class HackTerminalBot : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.F) && !complete)
         {
-            if(puzzle == null)
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            if (puzzle == null)
             {
                 GameObject x = Instantiate(hackPuzzle.gameObject);
                 puzzle = x;
@@ -78,6 +80,8 @@ public class HackTerminalBot : MonoBehaviour
         complete = true;
         playerMovement.canControl = true;
         playerPower.losePower = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
 

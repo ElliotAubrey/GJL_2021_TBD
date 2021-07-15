@@ -11,6 +11,7 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] Image fill;
     [SerializeField] Image battery1;
     [SerializeField] Image battery2;
+    [SerializeField] TextMeshProUGUI lowPowerPrompt;
 
     public int power = 100;
     public bool losePower = true;
@@ -43,10 +44,24 @@ public class PlayerPower : MonoBehaviour
         }
 
         if(power == 0 && batteries > 0)
-        { 
-            batteries--;
-            power = 100;
+        {
+            lowPowerPrompt.text = "Battery Change Required!";
+            playerMovement.canControl = false;
+            playerMovement.body.velocity = Vector2.zero;
+            //batteries--;
+            //power = 100;
             //Drag drop battery system goes here
+        }
+
+        if(power<=20 && power > 0)
+        {
+            lowPowerPrompt.gameObject.SetActive(true);
+            lowPowerPrompt.text = "Low Power!";
+            lowPowerPrompt.color = gradient.Evaluate(slider.normalizedValue);
+        }
+        else if(power > 20)
+        {
+            lowPowerPrompt.gameObject.SetActive(false);
         }
     }
 
