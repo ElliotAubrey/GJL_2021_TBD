@@ -10,7 +10,6 @@ public class HackTerminalDoor : MonoBehaviour
     [SerializeField] GameObject hackPuzzle = null;
     [SerializeField] Door[] doors;
 
-    SpriteRenderer playerSprite;
     bool complete = false;
     PlayerMovement playerMovement;
     PlayerPower playerPower;
@@ -20,7 +19,6 @@ public class HackTerminalDoor : MonoBehaviour
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         playerPower = GameObject.FindObjectOfType<PlayerPower>();
-        playerSprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,7 +38,6 @@ public class HackTerminalDoor : MonoBehaviour
                 GameObject x = Instantiate(hackPuzzle.gameObject);
                 puzzle = x;
                 puzzle.transform.position = playerMovement.transform.position;
-                playerSprite.enabled = false;
             }
             playerMovement.canControl = false;
             playerPower.losePower = false;
