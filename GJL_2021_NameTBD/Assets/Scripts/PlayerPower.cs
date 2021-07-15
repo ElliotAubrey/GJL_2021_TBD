@@ -7,7 +7,10 @@ using TMPro;
 public class PlayerPower : MonoBehaviour
 {
     [SerializeField] Slider slider;
-    [SerializeField] TextMeshProUGUI batteriesUI;
+    [SerializeField] Gradient gradient;
+    [SerializeField] Image fill;
+    [SerializeField] Image battery1;
+    [SerializeField] Image battery2;
 
     public int power = 100;
     public bool losePower = true;
@@ -19,18 +22,20 @@ public class PlayerPower : MonoBehaviour
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        batteriesUI.text = batteries.ToString();
     }
 
     public void BatteryPickUp(int amount)
     {
-        batteries += amount;
-        batteriesUI.text = batteries.ToString();
+        if(batteries < 1)
+        {
+            batteries += amount;
+        }
     }
 
     private void Update()
     {
         slider.value = power;
+        fill.color = gradient.Evaluate(slider.normalizedValue);
 
         if(power < 1 && batteries < 1)
         {
@@ -38,10 +43,10 @@ public class PlayerPower : MonoBehaviour
         }
 
         if(power == 0 && batteries > 0)
-        {
+        { 
             batteries--;
             power = 100;
-            batteriesUI.text = batteries.ToString();
+            //Drag drop battery system goes here
         }
     }
 
