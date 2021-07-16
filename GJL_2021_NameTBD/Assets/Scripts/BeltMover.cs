@@ -47,7 +47,7 @@ public class BeltMover : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.F) && cooldown == 0)
+        if (Input.GetKey(KeyCode.F) && cooldown == 0 && collision.gameObject.tag == "Player")
         {
             on = !on;
             for(int i = 0; i < belts.Length; i++)

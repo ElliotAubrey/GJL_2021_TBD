@@ -67,7 +67,7 @@ public class ConveyorBelt : MonoBehaviour
         {
             collision.gameObject.transform.position = new Vector3(transform.position.x, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
         }
-        if(collision.gameObject.GetComponent<StrongBotController>() != null)
+        if(collision.gameObject.tag == "StrongBot")
         {
             strongBotController = collision.gameObject.GetComponent<StrongBotController>();
         }
