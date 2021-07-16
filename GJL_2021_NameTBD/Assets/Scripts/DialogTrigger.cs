@@ -25,12 +25,12 @@ public class DialogTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && triggerOnce && !triggered)
+        if (collision.tag == "Player" && triggerOnce && !triggered || collision.tag == "StrongBot" && triggerOnce && !triggered)
         {
             triggered = true;
 
         }
-        else if (collision.tag == "Player" && !triggerOnce)
+        else if (collision.tag == "Player" && !triggerOnce || collision.tag == "StrongBot" && !triggerOnce)
         {
             triggered = true;
         }

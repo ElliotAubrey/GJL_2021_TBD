@@ -15,5 +15,5 @@ MonoBehaviour:
   dialog:
   - '[I must repair it.]'
   - '[My internal map of the factory states there is a generator in this direction.]'
-  - '[I am not able to reach the other side.]'
+  - '[I am not able to reach the other side with this many doors locked.]'
   - Starting scan...

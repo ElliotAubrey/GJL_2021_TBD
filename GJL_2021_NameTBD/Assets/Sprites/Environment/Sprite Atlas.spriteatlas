@@ -56,7 +56,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
-    totalSpriteSurfaceArea: 89296
+    totalSpriteSurfaceArea: 100816
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -154,11 +154,13 @@ SpriteAtlas:
   - {fileID: -8458876835016436005, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -5522858137417015416, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -2913339762047027565, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: 3696311465758499873, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 846543260657513261, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 5486715074065235137, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -7712289429731251995, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -942703671916293317, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 6303410023964961253, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: 2293308719612118179, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 5226370431636957977, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -5267604105256962981, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 6376862645921978160, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
@@ -177,6 +179,7 @@ SpriteAtlas:
   - {fileID: -8181584005753255020, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -8280238012447944769, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -898056904740959124, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: 6389532228182917908, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 3662817355424893871, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 3810906028079810913, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -7329726094282207613, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
@@ -350,11 +353,13 @@ SpriteAtlas:
   - Robo_Master_166
   - Robo_Master_78
   - Robo_Master_187
+  - Robo_Master_197
   - Robo_Master_157
   - Robo_Master_167
   - Robo_Master_79
   - Robo_Master_89
   - Robo_Master_180
+  - Robo_Master_196
   - Robo_Master_156
   - Robo_Master_164
   - Robo_Master_88
@@ -373,6 +378,7 @@ SpriteAtlas:
   - Robo_Master_160
   - Robo_Master_191
   - Robo_Master_161
+  - Robo_Master_190
   - Robo_Master_104
   - Robo_Master_105
   - Robo_Master_106

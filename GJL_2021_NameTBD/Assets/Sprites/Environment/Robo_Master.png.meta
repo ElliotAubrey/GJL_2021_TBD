@@ -590,6 +590,12 @@ TextureImporter:
   - first:
       213: 3449865414699484221
     second: Robo_Master_195
+  - first:
+      213: 2293308719612118179
+    second: Robo_Master_196
+  - first:
+      213: 3696311465758499873
+    second: Robo_Master_197
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -4805,6 +4811,69 @@ TextureImporter:
       bones: []
       spriteID: d348116015260ef20800000000000000
       internalID: 3449865414699484221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Master_190
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 176
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413c0c555bd2ca850800000000000000
+      internalID: 6389532228182917908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Master_196
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 176
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a449c8412873df10800000000000000
+      internalID: 2293308719612118179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Master_197
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1242db7b1bfeb4330800000000000000
+      internalID: 3696311465758499873
       vertices: []
       indices: 
       edges: []
