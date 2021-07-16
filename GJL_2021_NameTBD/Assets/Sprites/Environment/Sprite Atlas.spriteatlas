@@ -56,7 +56,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
-    totalSpriteSurfaceArea: 100816
+    totalSpriteSurfaceArea: 110544
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -147,9 +147,11 @@ SpriteAtlas:
   - {fileID: 7062342078258955087, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 3422320592100016924, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -4577347201303430665, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: 6448447788125156105, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 8599052746788413748, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -2514445036881356234, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -424894473313596019, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
+  - {fileID: -4449515506228529590, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: 7115367423515685313, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -8458876835016436005, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
   - {fileID: -5522858137417015416, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
@@ -346,9 +348,11 @@ SpriteAtlas:
   - Robo_Master_168
   - Robo_Master_28
   - Robo_Master_185
+  - Robo_Master_199
   - Robo_Master_151
   - Robo_Master_169
   - Robo_Master_186
+  - Robo_Master_198
   - Robo_Master_150
   - Robo_Master_166
   - Robo_Master_78
