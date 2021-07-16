@@ -69,7 +69,6 @@ public class WiresLogic : MonoBehaviour
         {
             wiresReset.Win();
             win = true;
-            playerMovement.canControl = true;
             if(!isDoor)
             {
                 hackTerminal.Send();

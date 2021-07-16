@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Hackbot : MonoBehaviour, IHackBot
 {
     [SerializeField] string botType;
     [SerializeField] int targetGroupLayer;
     [SerializeField] HackTerminalBot hackTerminal;
+    [SerializeField] TextMeshProUGUI prompt;
 
     
     public string GetBotType()
@@ -30,14 +32,19 @@ public class Hackbot : MonoBehaviour, IHackBot
 
     public void Complete()
     {
-        hackTerminal.Return();
+        hackTerminal.Return(true);
+    }
+
+    public void Return()
+    {
+        hackTerminal.Return(false);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (botType == "StrongBot" && collision.tag == "StrongBotExit")
         {
-            hackTerminal.Return();
+            hackTerminal.Return(true);
             Destroy(gameObject);
         }
     }

@@ -13,6 +13,7 @@ public class HackTerminalBot : MonoBehaviour
 
     SpriteRenderer playerSprite;
     bool complete = false;
+    bool objectiveComplete;
     PlayerMovement playerMovement;
     PlayerPower playerPower;
     GameObject puzzle = null;
@@ -28,7 +29,12 @@ public class HackTerminalBot : MonoBehaviour
         if(!complete)
         {
             prompt.gameObject.SetActive(true);
-            prompt.text = "F";
+            prompt.text = "F to hack";
+        }
+        else if(complete && !objectiveComplete)
+        {
+            prompt.gameObject.SetActive(true);
+            prompt.text = "F to switch control";
         }
     }
 
@@ -48,6 +54,12 @@ public class HackTerminalBot : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             prompt.gameObject.SetActive(false);
         }
+        else if (complete && !objectiveComplete && Input.GetKey(KeyCode.F))
+        {
+            playerMovement.canControl = false;
+            playerMovement.body.velocity = Vector2.zero;
+            Send();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -65,10 +77,11 @@ public class HackTerminalBot : MonoBehaviour
         playerPower.losePower = false;
         hackBot.React();
         target.m_Targets[hackBot.GetLayer()].weight = 1;
-        prompt.gameObject.SetActive(false);
+        prompt.gameObject.SetActive(true);
+        prompt.text = "R to return";
     }
 
-    public void Return()
+    public void Return(bool isComplete)
     {
         for (int i = 0; i < target.m_Targets.Length; i++)
         {
@@ -76,6 +89,7 @@ public class HackTerminalBot : MonoBehaviour
         }
         target.m_Targets[0].weight = 1;
         complete = true;
+        objectiveComplete = isComplete;
         playerMovement.canControl = true;
         playerPower.losePower = true;
     }

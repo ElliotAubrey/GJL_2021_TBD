@@ -6,6 +6,7 @@ public class StrongBotController : MonoBehaviour
 {
     [SerializeField] float walkSpeed;
     [SerializeField] float runSpeed;
+    [SerializeField] HackTerminalBot hackTerminal;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
 
@@ -36,6 +37,12 @@ public class StrongBotController : MonoBehaviour
         else
         {
             speed = walkSpeed;
+        }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            hackTerminal.Return(false);
+            canControl = false;
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");

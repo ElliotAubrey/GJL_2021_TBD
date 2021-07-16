@@ -41,7 +41,12 @@ public class BeltMover : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             prompt.gameObject.SetActive(true);
-            prompt.text = "F";
+            prompt.text = "F to use";
+        }
+        else
+        {
+            prompt.gameObject.SetActive(true);
+            prompt.text = "[I cannot use this]";
         }
     }
 
