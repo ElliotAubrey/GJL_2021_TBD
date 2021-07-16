@@ -21,8 +21,6 @@ public class DialogTrigger : MonoBehaviour
     void Start()
     {
         amountOfText = dialogSO.dialog.Length;
-        textBox = GameObject.Find("TextBox").transform;
-        text = textBox.Find("Text").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
