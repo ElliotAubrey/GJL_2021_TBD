@@ -13,5 +13,22 @@ MonoBehaviour:
   m_Name: Note 1
   m_EditorClassIdentifier: 
   dialog:
+  - Transcript over.
+  - '- Harry.'
+  - Say hi to the missus for me.
+  - Damn, I miss the outside world...
+  - ' I hope you atleast get some piece and quiet up away from the machines.'
+  - Or maybe you just have more freedom than I do...
+  - Maybe you have some insight that I don't.
+  - 'You understand my struggle, don''t you Dave? '
+  - Damn, I just wish I could get my lunch without a 6-part security protocol...
+  - 'All we really do is recycle trash all day. '
+  - I don't get why they're so scared, sure we control some pretty advanced systems
+    but...
+  - They seem so concerned with security nowadays, even got us using finger print
+    scans to get into our lockers...
+  - 'We keep getting these messages from the higher ups. '
+  - God I hate this place.
+  - 'Mail sent at 13:05PM | 12/4/97:'
   - 'Reads:'
   - Starting scan...
