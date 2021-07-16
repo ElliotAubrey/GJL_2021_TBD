@@ -14,6 +14,7 @@ public class ConveyorBelt : MonoBehaviour
 
     Vector2 direction;
     PlayerMovement playerMovement;
+    StrongBotController strongBotController;
     PlayerPower playerPower;
 
     public bool swap;
@@ -24,11 +25,10 @@ public class ConveyorBelt : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerPower = FindObjectOfType<PlayerPower>();
         ForceSwap();
+        direction = (end.transform.position - start.transform.position).normalized;
     }
     private void Update()
     {
-        direction = (end.transform.position - start.transform.position).normalized;
-
         switch (horizontal)
         {
             case true:
@@ -67,13 +67,25 @@ public class ConveyorBelt : MonoBehaviour
         {
             collision.gameObject.transform.position = new Vector3(transform.position.x, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
         }
-
+        if(collision.gameObject.GetComponent<StrongBotController>() != null)
+        {
+            strongBotController = collision.gameObject.GetComponent<StrongBotController>();
+        }
+        playerMovement.onBelt = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        playerMovement.canControl = false;
-        playerPower.losePower = false;
+        if(collision.gameObject.tag == "Player")
+        {
+            playerMovement.canControl = false;
+            playerPower.losePower = false;
+        }
+
+        if (collision.gameObject.tag == "StrongBot")
+        {
+            strongBotController.canControl = false;
+        }
         collision.GetComponent<Rigidbody2D>().velocity = direction * speed;
     }
 
@@ -86,9 +98,15 @@ public class ConveyorBelt : MonoBehaviour
             {
                 playerMovement.canControl = true;
             }
-           
         }
+
+        if (collision.gameObject.tag == "StrongBot")
+        {
+            strongBotController.canControl = true;
+        }
+
         collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        playerMovement.onBelt = false;
     }
 
     public void Switch()
@@ -98,6 +116,7 @@ public class ConveyorBelt : MonoBehaviour
 
         end = start;
         start = mid;
+        direction = (end.transform.position - start.transform.position).normalized;
     }
 
     public void ForceSwap()

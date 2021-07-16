@@ -98,7 +98,6 @@ public class DialogTrigger : MonoBehaviour
                 text.text = dialogSO.dialog[9];
                 amountOfText = amountOfText - 1;
                 break;
-
         }
     }
 

@@ -10,6 +10,11 @@ public class InGameMenu : MonoBehaviour
 
     bool paused = false;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))

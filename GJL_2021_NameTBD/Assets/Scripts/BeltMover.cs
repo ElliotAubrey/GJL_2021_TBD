@@ -38,8 +38,11 @@ public class BeltMover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        prompt.gameObject.SetActive(true);
-        prompt.text = "F";
+        if(collision.gameObject.tag == "Player")
+        {
+            prompt.gameObject.SetActive(true);
+            prompt.text = "F";
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

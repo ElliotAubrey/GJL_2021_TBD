@@ -17,8 +17,6 @@ public class HackTerminalDoor : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         playerPower = GameObject.FindObjectOfType<PlayerPower>();
     }
@@ -35,8 +33,6 @@ public class HackTerminalDoor : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) && !complete)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             if (puzzle == null)
             {
                 GameObject x = Instantiate(hackPuzzle.gameObject);
@@ -72,7 +68,6 @@ public class HackTerminalDoor : MonoBehaviour
         complete = true;
         playerMovement.canControl = true;
         playerPower.losePower = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 }
+

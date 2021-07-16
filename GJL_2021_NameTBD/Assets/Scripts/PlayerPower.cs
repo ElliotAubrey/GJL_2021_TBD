@@ -15,6 +15,7 @@ public class PlayerPower : MonoBehaviour
 
     public int power = 100;
     public bool losePower = true;
+    public bool needsReload = false;
 
     int batteries = 1;
     PlayerMovement playerMovement;
@@ -48,9 +49,7 @@ public class PlayerPower : MonoBehaviour
             lowPowerPrompt.text = "Battery Change Required!";
             playerMovement.canControl = false;
             playerMovement.body.velocity = Vector2.zero;
-            //batteries--;
-            //power = 100;
-            //Drag drop battery system goes here
+            needsReload = true;
         }
 
         if(power<=20 && power > 0)

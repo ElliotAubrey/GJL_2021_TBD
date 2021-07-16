@@ -9,6 +9,7 @@ public class StrongBotController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
 
+    public bool onBelt = false;
     public bool canControl = false;
     public Rigidbody2D body;
     float speed;

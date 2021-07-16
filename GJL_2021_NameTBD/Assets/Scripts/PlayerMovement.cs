@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
+    [SerializeField] StudioEventEmitter moveSound;
 
+    public bool onBelt = false;
     public bool canControl = false;
     public Rigidbody2D body;
     float speed;
@@ -50,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 horizontal = 0;
             }
         }
+
     }
 
     private void FixedUpdate()
@@ -59,8 +63,25 @@ public class PlayerMovement : MonoBehaviour
             body.bodyType = RigidbodyType2D.Dynamic;
             previousInput = new Vector2(horizontal, vertical);
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
-            body.velocity = movement;
 
+            if(movement != Vector2.zero && !moveSound.isActiveAndEnabled && !onBelt)
+            {
+                moveSound.enabled = true;
+            }
+            if(movement == Vector2.zero && moveSound.isActiveAndEnabled)
+            {
+                moveSound.enabled = false;
+            }
+            if(onBelt)
+            {
+                moveSound.enabled = false;
+            }
+            if(!canControl)
+            {
+                moveSound.enabled = false;
+            }
+
+            body.velocity = movement;
             SwitchAnimation(new Vector2(horizontal, vertical));
         }
     }

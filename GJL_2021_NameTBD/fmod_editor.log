@@ -1,0 +1,97 @@
+[LOG] System::create                           : Header version = 2.01.09. Current version = 2.01.09.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
+[LOG] SystemI::init                            : Initialize version=20109 (115889), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0000029CA90E4CD8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000029C7746CBE8 : node = 0000029A05F8C510
+[LOG] SystemI::createSound                     : add node to async list : head = 0000029C6DD8E2A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029C7746CBE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A05F8C620
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029C7746CBE8
+[LOG] SoundI::release                          : Robot Move (0000029C7746CBE8)
+[LOG] SoundI::release                          :     Robot Move (0000029C77204918)
+[LOG] SoundI::release                          :     Robot Move (0000029C6DD595C8)
+[LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000029C7501D998 : node = 0000029C8253CB70
+[LOG] SystemI::createSound                     : add node to async list : head = 0000029C6DD8E2A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029C7501D998
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029C8253CC80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029C7501D998
+[LOG] SoundI::release                          : Robot Move (0000029C7501D998)
+[LOG] SoundI::release                          :     Robot Move (0000029C77204DF8)
+[LOG] SoundI::release                          :     Robot Move (0000029C6DD590B8)
+[LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000029C81728AF8 : node = 0000029C6D2DD8D0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000029C6DD8E2A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029C81728AF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029C6D2DD9E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029C81728AF8
+[LOG] SoundI::release                          : Robot Move (0000029C81728AF8)
+[LOG] SoundI::release                          :     Robot Move (0000029C77204DF8)
+[LOG] SoundI::release                          :     Robot Move (0000029C6DD595C8)
+[LOG] SoundI::release                          : Ambience Loop (0000029C6E3D9CC8)
+[LOG] SoundI::release                          :     Ambience Loop (0000029C77204AB8)
+[LOG] SoundI::release                          :     Ambience Loop (0000029C6DD59E38)
+[LOG] SoundI::release                          : Conveyor Belt (0000029C6E3D9968)
+[LOG] SoundI::release                          :     Conveyor Belt (0000029C77204C58)
+[LOG] SoundI::release                          :     Conveyor Belt (0000029C6DD59AD8)
+[LOG] SoundI::release                          :  (0000029A09528658)
+[LOG] SoundI::release                          :     Remote Control (0000029A058142D8)
+[LOG] SoundI::release                          :  (0000029A09528C18)
+[LOG] SoundI::release                          :     Battery Low (0000029A05814618)
+[LOG] SoundI::release                          :  (0000029A09528378)
+[LOG] SoundI::release                          :     Battery Nominal (0000029A05814138)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
