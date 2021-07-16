@@ -21,18 +21,16 @@ public class DialogTrigger : MonoBehaviour
     void Start()
     {
         amountOfText = dialogSO.dialog.Length;
-        textBox = GameObject.Find("TextBox").transform;
-        text = textBox.Find("Text").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && triggerOnce && !triggered)
+        if (collision.tag == "Player" && triggerOnce && !triggered || collision.tag == "StrongBot" && triggerOnce && !triggered)
         {
             triggered = true;
 
         }
-        else if (collision.tag == "Player" && !triggerOnce)
+        else if (collision.tag == "Player" && !triggerOnce || collision.tag == "StrongBot" && !triggerOnce)
         {
             triggered = true;
         }
