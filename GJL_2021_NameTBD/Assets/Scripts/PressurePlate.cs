@@ -15,7 +15,7 @@ public class PressurePlate : MonoBehaviour
 
     private void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
+        rend = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -127,6 +127,8 @@ MonoBehaviour:
   hackPuzzle: {fileID: 7940626617563450974, guid: 6b8ccfa43c1b3e249a52f06988246e01, type: 3}
   doors:
   - {fileID: 0}
+  rend: {fileID: 0}
+  completed: {fileID: -5217733420325809763, guid: 47ca7371f336fea4db0ef177cca3811d, type: 3}
 --- !u!1 &7905800760610785564
 GameObject:
   m_ObjectHideFlags: 0

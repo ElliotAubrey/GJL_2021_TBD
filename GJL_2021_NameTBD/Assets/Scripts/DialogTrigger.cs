@@ -95,6 +95,46 @@ public class DialogTrigger : MonoBehaviour
                 text.text = dialogSO.dialog[9];
                 amountOfText = amountOfText - 1;
                 break;
+            case 11:
+                text.text = dialogSO.dialog[10];
+                amountOfText = amountOfText - 1;
+                break;
+            case 12:
+                text.text = dialogSO.dialog[11];
+                amountOfText = amountOfText - 1;
+                break;
+            case 13:
+                text.text = dialogSO.dialog[12];
+                amountOfText = amountOfText - 1;
+                break;
+            case 14:
+                text.text = dialogSO.dialog[13];
+                amountOfText = amountOfText - 1;
+                break;
+            case 15:
+                text.text = dialogSO.dialog[14];
+                amountOfText = amountOfText - 1;
+                break;
+            case 16:
+                text.text = dialogSO.dialog[15];
+                amountOfText = amountOfText - 1;
+                break;
+            case 17:
+                text.text = dialogSO.dialog[16];
+                amountOfText = amountOfText - 1;
+                break;
+            case 18:
+                text.text = dialogSO.dialog[17];
+                amountOfText = amountOfText - 1;
+                break;
+            case 19:
+                text.text = dialogSO.dialog[18];
+                amountOfText = amountOfText - 1;
+                break;
+            case 20:
+                text.text = dialogSO.dialog[19];
+                amountOfText = amountOfText - 1;
+                break;
         }
     }
 

@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
   - 'Advice: Boxes will reset when you leave the vicinity, if not on a pressure plate.'
-  - 'Advice: Be wary of boxes locking onto pressure plates. They still trigger power
-    on the edges. Use this for testing..'
+  - 'Advice: Be wary of boxes locking onto pressure plates.'
   - 'Conclusion: Power the 5 door pressure plates.'
   - '[Sensors say there are five controlled doors in this area.]'
   - '[Some of these pressure plates power unnecessary systems.]'

@@ -9,6 +9,8 @@ public class HackTerminalDoor : MonoBehaviour
     [SerializeField] TextMeshProUGUI prompt;
     [SerializeField] GameObject hackPuzzle = null;
     [SerializeField] Door[] doors;
+    [SerializeField] SpriteRenderer rend;
+    [SerializeField] Sprite completed;
 
     bool complete = false;
     PlayerMovement playerMovement;
@@ -19,6 +21,7 @@ public class HackTerminalDoor : MonoBehaviour
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         playerPower = GameObject.FindObjectOfType<PlayerPower>();
+        rend = gameObject.GetComponent<SpriteRenderer>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,6 +35,11 @@ public class HackTerminalDoor : MonoBehaviour
             prompt.gameObject.SetActive(true);
             prompt.text = "[I cannot use this]";
         }
+    }
+
+    public void ChangeSprite()
+    {
+        rend.sprite = completed;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -62,6 +70,7 @@ public class HackTerminalDoor : MonoBehaviour
         {
             doors[i].Open();
         }
+        ChangeSprite();
         playerMovement.canControl = true;
         playerPower.losePower = true;
     }

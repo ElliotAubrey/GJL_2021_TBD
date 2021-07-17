@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7120239900213300308}
   myCollider: {fileID: 1735268107543683512}
+  animator: {fileID: 0}
 --- !u!61 &1735268107543683512
 BoxCollider2D:
   m_ObjectHideFlags: 0
