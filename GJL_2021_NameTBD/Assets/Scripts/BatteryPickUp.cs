@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BatteryPickUp : MonoBehaviour
 {
-    [SerializeField] int amount = 1;
     PlayerPower playerPower;
 
     private void Start()
@@ -14,7 +13,9 @@ public class BatteryPickUp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        playerPower.BatteryPickUp(amount);
-        Destroy(gameObject);
+        if(playerPower.BatteryPickUp())
+        {
+            Destroy(gameObject);
+        }
     }
 }

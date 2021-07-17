@@ -26,15 +26,20 @@ public class HackTerminalBot : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!complete)
+        if(!complete && collision.gameObject.tag == "Player")
         {
             prompt.gameObject.SetActive(true);
             prompt.text = "F to hack";
         }
-        else if(complete && !objectiveComplete)
+        else if(complete && !objectiveComplete && collision.gameObject.tag == "Player")
         {
             prompt.gameObject.SetActive(true);
             prompt.text = "F to switch control";
+        }
+        else
+        {
+            prompt.gameObject.SetActive(true);
+            prompt.text = "[I cannot use this]";
         }
     }
 

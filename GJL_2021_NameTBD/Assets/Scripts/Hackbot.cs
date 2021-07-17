@@ -23,6 +23,11 @@ public class Hackbot : MonoBehaviour, IHackBot
             StrongBotController x = GetComponent<StrongBotController>();
             x.canControl = true;
         }
+        if(botType == "CrushBot")
+        {
+            CrushBotController x = GetComponent<CrushBotController>();
+            x.canControl = true;
+        }
     }
 
     public int GetLayer()

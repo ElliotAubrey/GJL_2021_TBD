@@ -16,7 +16,7 @@ public class CrushBox : MonoBehaviour
         else
         {
             prompt.gameObject.SetActive(true);
-            prompt.text = "[Maybe another bot can destroy this]";
+            prompt.text = "[Perhaps another bot can destroy this?]";
         }
     }
 

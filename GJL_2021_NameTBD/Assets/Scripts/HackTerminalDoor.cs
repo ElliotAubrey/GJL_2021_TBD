@@ -22,10 +22,15 @@ public class HackTerminalDoor : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!complete)
+        if (!complete && collision.gameObject.tag == "Player")
         {
             prompt.gameObject.SetActive(true);
-            prompt.text = "F";
+            prompt.text = "F to hack";
+        }
+        else
+        {
+            prompt.gameObject.SetActive(true);
+            prompt.text = "[I cannot use this]";
         }
     }
 
@@ -57,6 +62,7 @@ public class HackTerminalDoor : MonoBehaviour
         {
             doors[i].Open();
         }
+        playerMovement.canControl = true;
     }
 
     public void Return()

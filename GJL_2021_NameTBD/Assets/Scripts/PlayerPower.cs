@@ -9,15 +9,15 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] Gradient gradient;
     [SerializeField] Image fill;
-    [SerializeField] Image battery1;
-    [SerializeField] Image battery2;
+    [SerializeField] Image batteryUI;
+    [SerializeField] Sprite emptyBattery;
     [SerializeField] TextMeshProUGUI lowPowerPrompt;
 
     public int power = 100;
     public bool losePower = true;
     public bool needsReload = false;
 
-    int batteries = 1;
+    bool spareBattery = true;
     PlayerMovement playerMovement;
     int powerTimer = 50;
 
@@ -26,12 +26,15 @@ public class PlayerPower : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-    public void BatteryPickUp(int amount)
+    public bool BatteryPickUp()
     {
-        if(batteries < 1)
+        bool x = false;
+        if(!spareBattery)
         {
-            batteries += amount;
+            spareBattery = true;
+            x = true;
         }
+        return x;
     }
 
     private void Update()
@@ -39,17 +42,16 @@ public class PlayerPower : MonoBehaviour
         slider.value = power;
         fill.color = gradient.Evaluate(slider.normalizedValue);
 
-        if(power < 1 && batteries < 1)
+        if(power < 1 && !spareBattery)
         {
             playerMovement.canControl = false;
+            //death code
         }
 
-        if(power == 0 && batteries > 0)
+        if(power == 0 && spareBattery)
         {
-            lowPowerPrompt.text = "Battery Change Required!";
-            playerMovement.canControl = false;
-            playerMovement.body.velocity = Vector2.zero;
-            needsReload = true;
+            spareBattery = false;
+            power = 100;
         }
 
         if(power<=20 && power > 0)

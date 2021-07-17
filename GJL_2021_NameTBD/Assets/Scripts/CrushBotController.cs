@@ -8,6 +8,7 @@ public class CrushBotController : MonoBehaviour
     [SerializeField] float runSpeed;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
+    [SerializeField] HackTerminalBot hackTerminal;
 
     public bool onBelt = false;
     public bool canControl = false;
@@ -16,7 +17,6 @@ public class CrushBotController : MonoBehaviour
     float horizontal;
     float vertical;
     Vector2 previousInput;
-
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,12 @@ public class CrushBotController : MonoBehaviour
         else
         {
             speed = walkSpeed;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            hackTerminal.Return(false);
+            canControl = false;
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");

@@ -844,10 +844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e33c83d1da8e644b5fb6d4693511f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0
-  runSpeed: 0
+  walkSpeed: 4
+  runSpeed: 8
   animator: {fileID: 0}
   rend: {fileID: 0}
+  hackTerminal: {fileID: 0}
   onBelt: 0
   canControl: 0
   body: {fileID: 0}
