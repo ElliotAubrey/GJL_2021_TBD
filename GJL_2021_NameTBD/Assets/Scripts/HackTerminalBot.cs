@@ -92,6 +92,15 @@ public class HackTerminalBot : MonoBehaviour
         {
             target.m_Targets[i].weight = 0;
         }
+        if(hackBot.GetBotType() == "StrongBot")
+        {
+            hackBot.gameObject.GetComponent<StrongBotController>().canControl = false;
+        }
+        if(hackBot.GetBotType() == "CrushBot")
+        {
+            hackBot.gameObject.GetComponent<CrushBotController>().canControl = false;
+        }
+
         target.m_Targets[0].weight = 1;
         complete = true;
         objectiveComplete = isComplete;

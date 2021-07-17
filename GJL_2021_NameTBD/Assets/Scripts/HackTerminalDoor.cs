@@ -63,6 +63,7 @@ public class HackTerminalDoor : MonoBehaviour
             doors[i].Open();
         }
         playerMovement.canControl = true;
+        playerPower.losePower = true;
     }
 
     public void Return()
