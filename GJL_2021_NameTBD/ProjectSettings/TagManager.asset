@@ -10,6 +10,7 @@ TagManager:
   - StrongBotExit
   - PushBox
   - CrushBot
+  - ReloadPoint
   layers:
   - Default
   - TransparentFX

@@ -33,6 +33,7 @@ public class PlayerPower : MonoBehaviour
         {
             spareBattery = true;
             x = true;
+            batteryUI.gameObject.SetActive(true);
         }
         return x;
     }
@@ -50,6 +51,7 @@ public class PlayerPower : MonoBehaviour
 
         if(power == 0 && spareBattery)
         {
+            batteryUI.gameObject.SetActive(false);
             spareBattery = false;
             power = 100;
         }
