@@ -18,80 +18,122 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000248683E8858 : node = 00000248711A17D0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000248D038DAB8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E8858
+[LOG] SystemI::createSound                     : setdata soundi = 00000248683E8198 : node = 000002486756D470
+[LOG] SystemI::createSound                     : add node to async list : head = 0000024870CE5AF8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E8198
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000248711A18E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002486756D580
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E8858
-[LOG] SoundI::release                          : Robot Move (00000248683E8858)
-[LOG] SoundI::release                          :     Robot Move (0000024879C9E8C8)
-[LOG] SoundI::release                          :     Robot Move (000002464736E958)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E8198
+[LOG] SoundI::release                          : Robot Move (00000248683E8198)
+[LOG] SoundI::release                          :     Robot Move (00000246434DB918)
+[LOG] SoundI::release                          :     Robot Move (00000248A95F6228)
 [LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000248683E7C88 : node = 00000248711A17D0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000248D038DAB8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E7C88
+[LOG] SystemI::createSound                     : setdata soundi = 00000248683E5768 : node = 000002486756D330
+[LOG] SystemI::createSound                     : add node to async list : head = 0000024870CE5AF8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E5768
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000248711A18E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002486756D440
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E7C88
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E5768
 [LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000248683E64E8 : node = 00000248711A1910
-[LOG] SystemI::createSound                     : add node to async list : head = 00000248D038DAB8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E64E8
+[LOG] SystemI::createSound                     : setdata soundi = 00000248683E70B8 : node = 000002486756D470
+[LOG] SystemI::createSound                     : add node to async list : head = 0000024870CE5AF8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E70B8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000248711A1A20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002486756D580
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E64E8
-[LOG] SoundI::release                          : Robot Move (00000248683E7C88)
-[LOG] SoundI::release                          :     Robot Move (0000024879C9EDA8)
-[LOG] SoundI::release                          :     Robot Move (000002464736ECB8)
-[LOG] SoundI::release                          : Robot Move (00000248683E64E8)
-[LOG] SoundI::release                          :     Robot Move (00000248A8B02EF8)
-[LOG] SoundI::release                          :     Robot Move (00000248683E8BB8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E70B8
+[LOG] SoundI::release                          : Robot Move (00000248683E5768)
+[LOG] SoundI::release                          :     Robot Move (00000246434DA3F8)
+[LOG] SoundI::release                          :     Robot Move (00000248A95FC5B8)
+[LOG] SoundI::release                          : Robot Move (00000248683E70B8)
+[LOG] SoundI::release                          :     Robot Move (00000246434DD178)
+[LOG] SoundI::release                          :     Robot Move (00000248A95F9D38)
 [LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000024875907428 : node = 00000247FE76F970
-[LOG] SystemI::createSound                     : add node to async list : head = 00000248D038DAB8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024875907428
+[LOG] SystemI::createSound                     : setdata soundi = 00000248683E5C78 : node = 000002486756D330
+[LOG] SystemI::createSound                     : add node to async list : head = 0000024870CE5AF8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E5C78
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247FE76FA80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002486756D440
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024875907428
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002464736E7A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002464736E7A8
-[LOG] SoundI::release                          : Robot Move (0000024875907428)
-[LOG] SoundI::release                          :     Robot Move (00000248A8B02EF8)
-[LOG] SoundI::release                          :     Robot Move (00000248683E8858)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E5C78
+[LOG] SoundI::release                          : Robot Move (00000248683E5C78)
+[LOG] SoundI::release                          :     Robot Move (00000246434DE9D8)
+[LOG] SoundI::release                          :     Robot Move (00000248A95FB9E8)
+[LOG] SystemI::createSound                     : filename = Assets/Sound/Robot Game v7/Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000248683E55B8 : node = 000002486756D5B0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000024870CE5AF8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248683E55B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/Robot Game v7/Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 730560
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002486756D6C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Robot Move', format=5, channels=2, frequency=48000, lengthbytes=110528, lengthpcm=480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248683E55B8
+[LOG] SoundI::release                          : Robot Move (00000248683E55B8)
+[LOG] SoundI::release                          :     Robot Move (00000246434DE018)
+[LOG] SoundI::release                          :     Robot Move (00000248A95F6228)
 [LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000248A95FA3F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000248A95FA3F8
+[LOG] SoundI::release                          : Ambience Loop (00000248683E8A08)
+[LOG] SoundI::release                          :     Ambience Loop (00000246434DDE78)
+[LOG] SoundI::release                          :     Ambience Loop (00000248A95FA3F8)
+[LOG] SoundI::release                          : Conveyor Belt (00000248683E8BB8)
+[LOG] SoundI::release                          :     Conveyor Belt (00000246434DA8D8)
+[LOG] SoundI::release                          :     Conveyor Belt (00000248A95F7308)
+[LOG] SoundI::release                          :  (00000247FD3BFC88)
+[LOG] SoundI::release                          :     Remote Control (00000248EDC29C38)
+[LOG] SoundI::release                          :  (00000247FD3BF9A8)
+[LOG] SoundI::release                          :     Battery Low (00000248EDC28BF8)
+[LOG] SoundI::release                          :  (00000247FD3BFB18)
+[LOG] SoundI::release                          :     Battery Nominal (00000248EDC28D98)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.

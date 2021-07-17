@@ -43,7 +43,7 @@ public class HackTerminalBot : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(Input.GetKey(KeyCode.F) && !complete)
+        if(Input.GetKey(KeyCode.F) && !complete && playerMovement.canControl)
         {
             if (puzzle == null)
             {
@@ -79,6 +79,7 @@ public class HackTerminalBot : MonoBehaviour
         playerPower.losePower = false;
         hackBot.React();
         target.m_Targets[hackBot.GetLayer()].weight = 1;
+        complete = true;
         prompt.gameObject.SetActive(true);
         prompt.text = "R to return";
     }
@@ -99,7 +100,6 @@ public class HackTerminalBot : MonoBehaviour
         }
 
         target.m_Targets[0].weight = 1;
-        complete = true;
         objectiveComplete = isComplete;
         playerMovement.canControl = true;
         playerPower.losePower = true;
