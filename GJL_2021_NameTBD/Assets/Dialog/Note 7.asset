@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b3d854eacaf974d9125931ddd8885b, type: 3}
+  m_Name: Note 7
+  m_EditorClassIdentifier: 
+  dialog:
+  - Transcript over.
+  - If I don't get back to writing this note, THIS IS CASSIE, WE HAVE A L4 INTRUSION
+    ON FLOOR 22 AND NEED EVAC ASAP.
+  - There's a noise in the control room.
+  - 
+  - Guess we aren't going home this weekend...
+  - And the idiots on the floor above us decided to LOCK US ALL IN.
+  - Apparently the security system picked up an intruder getting through our main
+    elevator system.
+  - So, we've gone into lockdown...
+  - 'Reads:'
+  - Starting scan...

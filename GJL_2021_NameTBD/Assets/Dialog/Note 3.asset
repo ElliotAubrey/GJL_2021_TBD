@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b3d854eacaf974d9125931ddd8885b, type: 3}
+  m_Name: Note 3
+  m_EditorClassIdentifier: 
+  dialog:
+  - Transcript over.
+  - '- Kyle.'
+  - Should be solved now, send a message if anything happens again.
+  - Apparently that fuel has travelled near one of the furnaces, and it kept setting
+    on fire.
+  - Lara found a broken fuel pipe down on layer 24.
+  - "Update on the whole \u201Ceverything set on fire again\u201D situation."
+  - 'Mail sent at 16:23PM | 3/2/97:'
+  - 'Reads:'
+  - Starting scan...

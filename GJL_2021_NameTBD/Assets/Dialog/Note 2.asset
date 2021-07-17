@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: Note 2
   m_EditorClassIdentifier: 
   dialog:
+  - Transcript over.
+  - "I hope that\u2019s not what happened to John\u2026"
+  - "There\u2019s rumours of some really dark things."
+  - "I mean, I know it\u2019s probably just uncovered wiring and pipes, or the ways
+    down to the other levels but\u2026"
+  - "Does anyone wonder what\u2019s down these deep edges? "
   - 'Reads:'
   - Starting scan...

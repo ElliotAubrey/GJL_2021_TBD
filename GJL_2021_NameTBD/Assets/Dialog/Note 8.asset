@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b3d854eacaf974d9125931ddd8885b, type: 3}
+  m_Name: Note 8
+  m_EditorClassIdentifier: 
+  dialog:
+  - Transcript over.
+  - How long are we going to be down here?
+  - 
+  - So much for this high-tech security system...
+  - Tony's disappeared, and we haven't seen Cassie since she when to section B.
+  - The main power systems are failing too, Alice has ventured into one of the generator
+    rooms to see what's going on.
+  - Someone's going 'round destroying all the mammoths.
+  - 'Reads:'
+  - Starting scan...
