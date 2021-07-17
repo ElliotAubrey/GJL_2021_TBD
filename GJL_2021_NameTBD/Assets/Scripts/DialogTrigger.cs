@@ -28,7 +28,6 @@ public class DialogTrigger : MonoBehaviour
         if (collision.tag == "Player" && triggerOnce && !triggered || collision.tag == "StrongBot" && triggerOnce && !triggered)
         {
             triggered = true;
-
         }
         else if (collision.tag == "Player" && !triggerOnce || collision.tag == "StrongBot" && !triggerOnce)
         {

@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
-    [SerializeField] StudioEventEmitter moveSound;
 
+    public StudioEventEmitter moveSound;
     public bool onBelt = false;
     public bool canControl = false;
     public Rigidbody2D body;

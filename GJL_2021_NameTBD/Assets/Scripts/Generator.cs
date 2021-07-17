@@ -7,12 +7,9 @@ public class Generator : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI prompt;
     [SerializeField] GameObject core;
-    [SerializeField] bool powerOn;
+    [SerializeField] bool powerOn = false;
+    [SerializeField] Objective objective;
 
-    void Start()
-    {
-        powerOn = false;
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +17,11 @@ public class Generator : MonoBehaviour
         {
             prompt.gameObject.SetActive(true);
             prompt.text = "F" + "\n" + "Insert core.";
+        }
+        else
+        {
+            prompt.gameObject.SetActive(true);
+            prompt.text = "[I cannot use this]";
         }
     }
 
@@ -38,9 +40,10 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.F) && collision.tag == "Player" && !powerOn)
         {
             powerOn = true;
+            objective.NewGen();
         }
 
     }

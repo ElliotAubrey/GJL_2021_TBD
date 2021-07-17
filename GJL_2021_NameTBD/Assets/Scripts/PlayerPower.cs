@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerPower : MonoBehaviour
 {
@@ -46,7 +47,9 @@ public class PlayerPower : MonoBehaviour
         if(power < 1 && !spareBattery)
         {
             playerMovement.canControl = false;
-            //death code
+            playerMovement.body.velocity = Vector2.zero;
+            lowPowerPrompt.text = "Dead";
+            StartCoroutine(Dead());
         }
 
         if(power == 0 && spareBattery)
@@ -86,6 +89,15 @@ public class PlayerPower : MonoBehaviour
                 power--;
             }
             powerTimer = 50;
+        }
+    }
+
+    IEnumerator Dead()
+    {
+        yield return new WaitForSeconds(3);
+        {
+            Debug.Log("Loaded");
+            SceneManager.LoadScene("Menu");
         }
     }
 }
