@@ -60,6 +60,12 @@ public class WiresLogic : MonoBehaviour
     }
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            wiresReset.Cancel();
+            playerMovement.canControl = true;
+            playerSprite.enabled = true;
+        }
         b1 = wireEnds[0].correct;
         b2 = wireEnds[1].correct;
         b3 = wireEnds[2].correct;

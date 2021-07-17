@@ -29,4 +29,9 @@ public class WiresReset : MonoBehaviour
     {
         Destroy(go);
     }
+
+    public void Cancel()
+    {
+        Destroy(gameObject);
+    }
 }

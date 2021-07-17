@@ -11,7 +11,6 @@ public class HackTerminalBot : MonoBehaviour
     [SerializeField] GameObject hackPuzzle = null;
     [SerializeField] Hackbot hackBot;
 
-    SpriteRenderer playerSprite;
     bool complete = false;
     bool objectiveComplete;
     PlayerMovement playerMovement;
@@ -22,7 +21,6 @@ public class HackTerminalBot : MonoBehaviour
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         playerPower = GameObject.FindObjectOfType<PlayerPower>();
-        playerSprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,7 +50,6 @@ public class HackTerminalBot : MonoBehaviour
                 GameObject x = Instantiate(hackPuzzle.gameObject);
                 puzzle = x;
                 puzzle.transform.position = playerMovement.transform.position;
-                playerSprite.enabled = false;
             }
             playerMovement.canControl = false;
             playerPower.losePower = false;
