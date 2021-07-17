@@ -36,7 +36,7 @@ public class HackTerminalDoor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.F) && !complete)
+        if (Input.GetKey(KeyCode.F) && !complete && playerMovement.canControl)
         {
             if (puzzle == null)
             {
