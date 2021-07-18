@@ -16,6 +16,7 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] StudioEventEmitter lowPower;
     [SerializeField] StudioEventEmitter batteryChange;
     [SerializeField] StudioEventEmitter batteryPickup;
+    [SerializeField] StudioEventEmitter batteryRunOut;
 
     public int power = 100;
     public bool losePower = true;
@@ -57,7 +58,12 @@ public class PlayerPower : MonoBehaviour
         {
             playerMovement.canControl = false;
             playerMovement.body.velocity = Vector2.zero;
-            lowPowerPrompt.text = "Dead";
+            if(batteryRunOut.enabled == true)
+            {
+                batteryRunOut.enabled = false;
+            }
+
+            batteryRunOut.enabled = true;
             StartCoroutine(Dead());
         }
 
