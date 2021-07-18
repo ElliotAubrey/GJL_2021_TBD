@@ -8,16 +8,18 @@ public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] RenderPipelineAsset[] qualityLevels;
     [SerializeField] TMP_Dropdown dropdown;
-    FMOD.Studio.Bus bus;
+
+    FMOD.Studio.Bus masterbus;
 
     void Start()
     {
         dropdown.value = QualitySettings.GetQualityLevel();
-        bus = RuntimeManager.GetBus("Master Bus");
+        masterbus = FMODUnity.RuntimeManager.GetBus("Master Bus");
     }
     public void SetVolume(float volume)
     {
         Debug.Log(volume);
+        masterbus.setVolume(volume);
         // https://alessandrofama.com/tutorials/fmod-unity/mixer/
         //must do a get in the start so the menu is accurate
     }

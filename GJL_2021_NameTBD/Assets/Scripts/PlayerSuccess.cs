@@ -7,19 +7,30 @@ public class PlayerSucess : MonoBehaviour
 {
     [SerializeField] float successAdded;
     [SerializeField] float successRemoved;
-    [SerializeField] StudioGlobalParameterTrigger music;
+    [SerializeField] Music music;
 
     public float sucessLevel = 3;
 
     public void PuzzleComplete()
     {
         sucessLevel += successAdded;
-        music.value = sucessLevel;
+        if(sucessLevel>3)
+        {
+            sucessLevel = 3;
+        }
     }
 
     public void PuzzleFailed()
     {
         sucessLevel -= successRemoved;
-        music.value = sucessLevel;
+        if(sucessLevel<0)
+        {
+            sucessLevel = 0;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        music.SucessLevel = sucessLevel;
     }
 }

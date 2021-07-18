@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022209532C08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002220953A9A8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,3 +16,79 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] SoundI::release                          :  (000002222FDEE3B8)
+[LOG] SoundI::release                          :     Robot Game music layer 3 (000002216FA72BC8)
+[LOG] SoundI::release                          :  (000002223402C908)
+[LOG] SoundI::release                          :     Robot Game music Echo (0000022174685B08)
+[LOG] SoundI::release                          :  (000002222FDEE698)
+[LOG] SoundI::release                          :     Robot Game music layer 1 (000002216FA72548)
+[LOG] SoundI::release                          :  (000002223402C798)
+[LOG] SoundI::release                          :     Robot Game music layer 2 (0000022174682088)
+[LOG] SoundI::release                          :  (000002222FDEE0D8)
+[LOG] SoundI::release                          :     Gen 2 Online (0000022174682568)
+[LOG] SoundI::release                          :  (00000221F4DC8A58)
+[LOG] SoundI::release                          :     Chainsaw Bot (000002217ED84A28)
+[LOG] SoundI::release                          :  (00000221F4DC88E8)
+[LOG] SoundI::release                          :     Gen 3 Online (000002217ED85588)
+[LOG] SoundI::release                          :  (000002225FDD3C78)
+[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 1 SND7194 1 (0000022178C9F478)
+[LOG] SoundI::release                          :  (000002225F993D88)
+[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 11 SND7184 (00000221746828A8)
+[LOG] SoundI::release                          :  (000002222FDEE528)
+[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 23 SND7172 1 (000002216FA70E88)
+[LOG] SoundI::release                          :  (000002225FDD3548)
+[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 23 SND7172 2 (0000022178C9EC58)
+[LOG] SoundI::release                          :  (000002220930D908)
+[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 9 SND7186 1 (000002216FA71028)
+[LOG] SoundI::release                          :  (000002220930DA78)
+[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 9 SND7186 2 (000002216FA71848)
+[LOG] SoundI::release                          :  (000002225F993EF8)
+[LOG] SoundI::release                          :     PICKUP BATTERY (00000221746852E8)
+[LOG] SoundI::release                          :  (000002223402C4B8)
+[LOG] SoundI::release                          :     Battery Runs Out (00000221746823C8)
+[LOG] SoundI::release                          :  (000002217A983C18)
+[LOG] SoundI::release                          :     Drop Wire  (0000022174683748)
+[LOG] SoundI::release                          :  (000002225FDD40C8)
+[LOG] SoundI::release                          :     Crate Crush 1 (0000022178C9EAB8)
+[LOG] SoundI::release                          :  (00000221F4DC8D38)
+[LOG] SoundI::release                          :     Crate Crush 2 (000002217ED84F08)
+[LOG] SoundI::release                          :  (000002220930D628)
+[LOG] SoundI::release                          :     Gen 1 Online (000002216FA71368)
+[LOG] SoundI::release                          :  (000002225F994068)
+[LOG] SoundI::release                          :     Wire Hold (Static) (0000022174684AC8)
+[LOG] SoundI::release                          :  (000002217A983AA8)
+[LOG] SoundI::release                          :     Door Open (00000221746835A8)
+[LOG] SoundI::release                          :  (000002220930D798)
+[LOG] SoundI::release                          :     Gen 4 Online (000002216FA719E8)
+[LOG] SoundI::release                          :  (000002225FDD3F58)
+[LOG] SoundI::release                          :     Select Wire (0000022178C9F2D8)
+[LOG] SoundI::release                          :  (000002225FDD3DE8)
+[LOG] SoundI::release                          :     Game Complete (0000022178C9FFD8)
+[LOG] SoundI::release                          :  (000002220930D4B8)
+[LOG] SoundI::release                          :     Box Push  (000002216FA72A28)
+[LOG] SoundI::release                          :  (000002217A983658)
+[LOG] SoundI::release                          :     Robot Move (0000022178C9FAF8)
+[LOG] SoundI::release                          :  (000002222FDEE248)
+[LOG] SoundI::release                          :     Remote Control (000002216FA716A8)
+[LOG] SoundI::release                          :  (000002217A983EF8)
+[LOG] SoundI::release                          :     Battery Low (0000022178C9F958)
+[LOG] SoundI::release                          :  (000002225FDD3828)
+[LOG] SoundI::release                          :     Conveyor Belt (0000022178C9F138)
+[LOG] SoundI::release                          :  (000002217A983938)
+[LOG] SoundI::release                          :     Battery Nominal (0000022178CA0178)
+[LOG] SoundI::release                          :  (000002217A9837C8)
+[LOG] SoundI::release                          :     Ambience Loop (0000022178C9F7B8)
+[LOG] SoundI::release                          :  (000002225F993C18)
+[LOG] SoundI::release                          :     Pressure Plate Activae (0000022174684448)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.

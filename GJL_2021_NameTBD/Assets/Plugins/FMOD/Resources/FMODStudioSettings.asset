@@ -399,8 +399,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Sound/Robot Game v10/Robot Game v10.fspro
-  sourceBankPath: Assets/Sound/Robot Game v10/Build
+  sourceProjectPath: Assets/Sound/Robot Game v12/Robot Game v12.fspro
+  sourceBankPath: Assets/Sound/Robot Game v12/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

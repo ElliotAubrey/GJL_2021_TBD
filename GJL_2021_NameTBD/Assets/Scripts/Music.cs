@@ -26,7 +26,7 @@ public class Music : MonoBehaviour
 
     void FixedUpdate()
     {
-        instance.setParameterByName("SucessLevel", SucessLevel);
+        instance.setParameterByName("Success Level", SucessLevel);
         instance.setParameterByName("Power", Power);
     }
 }
