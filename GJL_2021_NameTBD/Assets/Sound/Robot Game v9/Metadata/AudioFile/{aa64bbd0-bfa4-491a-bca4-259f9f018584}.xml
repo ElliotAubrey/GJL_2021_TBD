@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{aa64bbd0-bfa4-491a-bca4-259f9f018584}">
+		<property name="assetPath">
+			<value>Gen 1 Online.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.2279591836734696</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b87edb03-a757-4f7f-9814-6f48f64f824a}</destination>
+		</relationship>
+	</object>
+</objects>

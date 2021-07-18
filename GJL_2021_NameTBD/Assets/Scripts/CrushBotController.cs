@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class CrushBotController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CrushBotController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
     [SerializeField] HackTerminalBot hackTerminal;
+    [SerializeField] StudioListener listener;
 
     public bool onBelt = false;
     public bool canControl = false;
@@ -29,6 +31,10 @@ public class CrushBotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(canControl && listener.attenuationObject != gameObject)
+        {
+            listener.attenuationObject = gameObject;
+        }
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
@@ -42,6 +48,7 @@ public class CrushBotController : MonoBehaviour
         {
             hackTerminal.Return(false);
             canControl = false;
+            listener.attenuationObject = GetComponent<PlayerMovement>().gameObject;
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");

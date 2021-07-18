@@ -10,6 +10,7 @@ public class WiresLogic : MonoBehaviour
     [SerializeField] WireRandomiser wireRandomiser;
     [SerializeField] bool isDoor = false;
 
+    PlayerSuccess playerSuccess;
     PlayerMovement playerMovement;
     SpriteRenderer playerSprite;
     HackTerminalBot hackTerminal;
@@ -26,6 +27,7 @@ public class WiresLogic : MonoBehaviour
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
         playerSprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+        playerSuccess = GameObject.FindObjectOfType<PlayerSuccess>();
 
         //find the closest hack terminal
         HackTerminalDoor[] terminalDoors = FindObjectsOfType<HackTerminalDoor>();
@@ -73,6 +75,7 @@ public class WiresLogic : MonoBehaviour
 
         if(b1 && b2 && b3 && b4)
         {
+            playerSuccess.PuzzleComplete();
             wiresReset.Win();
             win = true;
             if(!isDoor)
@@ -87,6 +90,7 @@ public class WiresLogic : MonoBehaviour
         }
         else if(wireEnds[1].attached && wireEnds[2].attached && wireEnds[3].attached && wireEnds[0].attached && !win)
         {
+            playerSuccess.PuzzleFailed();
             wiresReset.Reset();
             wireRandomiser.Randomise();
         }

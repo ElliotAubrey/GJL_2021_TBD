@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{bbcce71c-82d4-411f-ab13-b3dbe006d2e3}">
+		<property name="assetPath">
+			<value>Robots, Voice, Droid, Sci-Fi, Emote 23 SND7172 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8097291666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b87edb03-a757-4f7f-9814-6f48f64f824a}</destination>
+		</relationship>
+	</object>
+</objects>

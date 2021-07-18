@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class PlayerPower : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] Image batteryUI;
     [SerializeField] Sprite emptyBattery;
     [SerializeField] TextMeshProUGUI lowPowerPrompt;
+    [SerializeField] StudioEventEmitter lowPower;
+    [SerializeField] StudioEventEmitter batteryChange;
 
     public int power = 100;
     public bool losePower = true;
@@ -58,6 +61,11 @@ public class PlayerPower : MonoBehaviour
             batteryUI.gameObject.SetActive(false);
             spareBattery = false;
             power = 100;
+            if(batteryChange.enabled == true)
+            {
+                batteryChange.enabled = false;
+            }
+            batteryChange.enabled = true;
         }
 
         if(power<=20 && power > 0)
@@ -65,10 +73,18 @@ public class PlayerPower : MonoBehaviour
             lowPowerPrompt.gameObject.SetActive(true);
             lowPowerPrompt.text = "Low Power!";
             lowPowerPrompt.color = gradient.Evaluate(slider.normalizedValue);
+            if(lowPower.enabled == false)
+            {
+                lowPower.enabled = true;
+            }
         }
         else if(power > 20)
         {
             lowPowerPrompt.gameObject.SetActive(false);
+            if (lowPower.enabled == true)
+            {
+                lowPower.enabled = false;
+            }
         }
     }
 

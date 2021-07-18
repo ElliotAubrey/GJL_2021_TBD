@@ -13,7 +13,7 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         dropdown.value = QualitySettings.GetQualityLevel();
-        bus = RuntimeManager.GetBus("THE BUS NAME");
+        bus = RuntimeManager.GetBus("Master Bus");
     }
     public void SetVolume(float volume)
     {

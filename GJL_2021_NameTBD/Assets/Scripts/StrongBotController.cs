@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class StrongBotController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class StrongBotController : MonoBehaviour
     [SerializeField] HackTerminalBot hackTerminal;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
+    [SerializeField] StudioListener listener;
 
     public bool onBelt = false;
     public bool canControl = false;
@@ -30,6 +32,10 @@ public class StrongBotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canControl && listener.attenuationObject != gameObject)
+        {
+            listener.attenuationObject = gameObject;
+        }
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
@@ -43,6 +49,7 @@ public class StrongBotController : MonoBehaviour
         {
             hackTerminal.Return(false);
             canControl = false;
+            listener.attenuationObject = GetComponent<PlayerMovement>().gameObject;
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");

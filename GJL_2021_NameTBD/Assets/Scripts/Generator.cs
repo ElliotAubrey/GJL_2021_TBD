@@ -13,7 +13,7 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !powerOn)
         {
             prompt.gameObject.SetActive(true);
             prompt.text = "F" + "\n" + "Insert core.";
