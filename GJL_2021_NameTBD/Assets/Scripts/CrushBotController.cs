@@ -82,6 +82,8 @@ public class CrushBotController : MonoBehaviour
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
             body.velocity = movement;
 
+            SwitchAnimation(new Vector2(horizontal, vertical));
+
             if (movement != Vector2.zero && !moveSound.isActiveAndEnabled && !onBelt)
             {
                 moveSound.enabled = true;
@@ -98,8 +100,6 @@ public class CrushBotController : MonoBehaviour
             {
                 moveSound.enabled = false;
             }
-
-            SwitchAnimation(new Vector2(horizontal, vertical));
         }
     }
 
