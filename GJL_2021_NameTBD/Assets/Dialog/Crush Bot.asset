@@ -10,9 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6b3d854eacaf974d9125931ddd8885b, type: 3}
-  m_Name: 1
+  m_Name: Crush Bot
   m_EditorClassIdentifier: 
-  dialog:
-  - '[The cleaning protocol is not being followed...]'
-  - 'Conclusion: Messy.'
-  - Searching...
+  dialog: []

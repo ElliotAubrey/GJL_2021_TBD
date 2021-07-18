@@ -178,6 +178,6 @@ public class DialogTrigger : MonoBehaviour
 
     public void GoToStartScene()
     {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Menu");
     }
 }
