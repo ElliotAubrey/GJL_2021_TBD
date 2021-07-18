@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class DialogTrigger : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField] Transform textBox;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] bool triggerOnce, final;
+    [SerializeField] StudioEventEmitter finalSound;
 
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] PlayerPower playerPower;
@@ -174,6 +176,11 @@ public class DialogTrigger : MonoBehaviour
     public void FinalMessage()
     {
         finalOverlay.SetActive(true);
+        if(finalSound.enabled == true)
+        {
+            finalSound.enabled = false;
+        }
+        finalSound.enabled = true;
     }
 
     public void GoToStartScene()
