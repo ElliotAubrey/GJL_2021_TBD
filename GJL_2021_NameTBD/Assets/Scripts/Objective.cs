@@ -16,14 +16,14 @@ public class Objective : MonoBehaviour
         if(g1 && g2 && g3)
         {
             objPrompt.text = "Find the main power switch";
-        }
-        else
-        {
-            objPrompt.text = "Turn on generators " + generatorCount + "/3";
             if (finalDoor.open == false)
             {
                 finalDoor.Open();
             }
+        }
+        else
+        {
+            objPrompt.text = "Turn on generators " + generatorCount + "/3";
         }
     }
 
