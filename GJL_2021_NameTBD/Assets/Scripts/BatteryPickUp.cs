@@ -15,7 +15,7 @@ public class BatteryPickUp : MonoBehaviour
     {
         if(playerPower.BatteryPickUp())
         {
-            Destroy(gameObject);
+            Destroy(gameObject.transform.parent);
         }
     }
 }
