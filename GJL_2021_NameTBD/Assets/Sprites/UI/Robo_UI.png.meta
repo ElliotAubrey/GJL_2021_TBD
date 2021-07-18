@@ -56,6 +56,9 @@ TextureImporter:
   - first:
       213: -9043536680983985208
     second: Robo_UI_17
+  - first:
+      213: 8367141122608394747
+    second: Robo_UI_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -554,6 +557,27 @@ TextureImporter:
       bones: []
       spriteID: 8c30cb8ad47ee7280800000000000000
       internalID: -9043536680983985208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_UI_18
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 96
+        width: 146
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1f2ae158e0e1470800000000000000
+      internalID: 8367141122608394747
       vertices: []
       indices: 
       edges: []
