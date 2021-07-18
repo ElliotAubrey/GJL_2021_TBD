@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Giant Knight
   m_EditorClassIdentifier: 
   dialog:
-  - '[I do not envy this bot...]'
-  - 'Advice: Recycle fusion core.'
-  - 'Conclusion: Beyond repair.'
+  - '[I will leave this to the mechanics.]'
+  - '[This bot seems to be half way through repair.]'
+  - 'Conclusion: Currently in repair.'
   - Scanning for solution...
   - 'Status: Damaged.'
-  - 'Variation: Mammoth Sorting Bot V1.7'
+  - 'Variation: Mammoth Packing Bot V1.2'
   - Starting scan...

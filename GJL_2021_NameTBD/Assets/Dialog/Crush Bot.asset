@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b3d854eacaf974d9125931ddd8885b, type: 3}
   m_Name: Crush Bot
   m_EditorClassIdentifier: 
-  dialog: []
+  dialog:
+  - '[They are used to remove obstacles.]'
+  - '[This is a Crush Bot.]'
+  - Starting scan...
