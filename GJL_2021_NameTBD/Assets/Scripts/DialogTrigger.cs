@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogTrigger : MonoBehaviour
 {
     [SerializeField] DialogSO dialogSO;
     [SerializeField] Transform textBox;
     [SerializeField] TextMeshProUGUI text;
-    [SerializeField] bool triggerOnce;
+    [SerializeField] bool triggerOnce, final;
 
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] PlayerPower playerPower;
+    [SerializeField] GameObject finalOverlay;
 
     bool triggered, isPlaying;
     int amountOfText;
@@ -53,7 +55,14 @@ public class DialogTrigger : MonoBehaviour
         switch (amountOfText)
         {
             case 0:
-                CloseTextBox();
+                if (final == true)
+                {
+                    FinalMessage();
+                }
+                else
+                {
+                    CloseTextBox();
+                }
                 break;
             case 1:
                 text.text = dialogSO.dialog[0];
@@ -160,5 +169,15 @@ public class DialogTrigger : MonoBehaviour
 
         playerMovement.canControl = true;
         playerPower.losePower = true;
+    }
+
+    public void FinalMessage()
+    {
+        finalOverlay.SetActive(true);
+    }
+
+    public void GoToStartScene()
+    {
+        SceneManager.LoadScene("Start");
     }
 }
