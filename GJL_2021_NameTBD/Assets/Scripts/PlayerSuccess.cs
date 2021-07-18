@@ -9,7 +9,7 @@ public class PlayerSucess : MonoBehaviour
     [SerializeField] float successRemoved;
     [SerializeField] StudioGlobalParameterTrigger music;
 
-    float sucessLevel = 0;
+    public float sucessLevel = 3;
 
     public void PuzzleComplete()
     {

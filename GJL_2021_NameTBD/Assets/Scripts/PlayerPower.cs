@@ -17,6 +17,7 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] StudioEventEmitter batteryChange;
     [SerializeField] StudioEventEmitter batteryPickup;
     [SerializeField] StudioEventEmitter batteryRunOut;
+    [SerializeField] Music music;
 
     public int power = 100;
     public bool losePower = true;
@@ -101,6 +102,7 @@ public class PlayerPower : MonoBehaviour
 
     private void FixedUpdate()
     {
+        music.Power = power;
         if(playerMovement.body.velocity.x != 0 || playerMovement.body.velocity.y != 0)
         {
             powerTimer -= 2;

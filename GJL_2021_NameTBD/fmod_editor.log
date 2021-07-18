@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022209530658 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000022209532C08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,84 +16,3 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[WRN] AsyncCommandBuffer::growBuffer           : Growing command buffer to 65536 bytes. Initial command buffer size can be tuned to avoid dynamic growth using Studio::System::setAdvancedSettings()
-[WRN] AsyncCommandBuffer::growBuffer           : Growing command buffer to 131072 bytes. Initial command buffer size can be tuned to avoid dynamic growth using Studio::System::setAdvancedSettings()
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[WRN] AsyncCommandBuffer::growBuffer           : Growing command buffer to 262144 bytes. Initial command buffer size can be tuned to avoid dynamic growth using Studio::System::setAdvancedSettings()
-[LOG] SoundI::release                          :  (000002225F571B18)
-[LOG] SoundI::release                          :     Robot Game music layer 3 (00000221746835A8)
-[LOG] SoundI::release                          :  (000002217DB36628)
-[LOG] SoundI::release                          :     Robot Game music Echo (0000022182426528)
-[LOG] SoundI::release                          :  (000002225F571C88)
-[LOG] SoundI::release                          :     Robot Game music layer 1 (0000022174682088)
-[LOG] SoundI::release                          :  (000002217DB36798)
-[LOG] SoundI::release                          :     Robot Game music layer 2 (00000221746823C8)
-[LOG] SoundI::release                          :  (000002217DB378D8)
-[LOG] SoundI::release                          :     Gen 2 Online (0000022174684AC8)
-[LOG] SoundI::release                          :  (0000022179D4CC18)
-[LOG] SoundI::release                          :     Chainsaw Bot (000002216FA72A28)
-[LOG] SoundI::release                          :  (0000022179D4DEC8)
-[LOG] SoundI::release                          :     Gen 3 Online (000002216FA72BC8)
-[LOG] SoundI::release                          :  (000002217DB37A48)
-[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 1 SND7194 1 (000002218241C5E8)
-[LOG] SoundI::release                          :  (000002217DB36348)
-[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 11 SND7184 (0000022182421A68)
-[LOG] SoundI::release                          :  (000002225F571F68)
-[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 23 SND7172 1 (00000221746828A8)
-[LOG] SoundI::release                          :  (000002217DB36908)
-[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 23 SND7172 2 (000002218241B8E8)
-[LOG] SoundI::release                          :  (0000022179D4D628)
-[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 9 SND7186 1 (0000022174683748)
-[LOG] SoundI::release                          :  (0000022179D4CD88)
-[LOG] SoundI::release                          :     Robots, Voice, Droid, Sci-Fi, Emote 9 SND7186 2 (00000221746852E8)
-[LOG] SoundI::release                          :  (000002217DB36068)
-[LOG] SoundI::release                          :     PICKUP BATTERY (000002218241FD28)
-[LOG] SoundI::release                          :  (000002217DB371A8)
-[LOG] SoundI::release                          :     Battery Runs Out (0000022174682568)
-[LOG] SoundI::release                          :  (000002217DB36D58)
-[LOG] SoundI::release                          :     Drop Wire  (000002218241FB88)
-[LOG] SoundI::release                          :  (000002217DB37318)
-[LOG] SoundI::release                          :     Crate Crush 1 (000002218241A088)
-[LOG] SoundI::release                          :  (0000022179D4C378)
-[LOG] SoundI::release                          :     Crate Crush 2 (000002216FA70E88)
-[LOG] SoundI::release                          :  (0000022179D4D798)
-[LOG] SoundI::release                          :     Gen 1 Online (000002216FA72548)
-[LOG] SoundI::release                          :  (000002217DB37038)
-[LOG] SoundI::release                          :     Wire Hold (Static) (0000022182427228)
-[LOG] SoundI::release                          :  (000002217DB37768)
-[LOG] SoundI::release                          :     Door Open (000002218241F508)
-[LOG] SoundI::release                          :  (0000022179D4D068)
-[LOG] SoundI::release                          :     Gen 4 Online (000002216FA71028)
-[LOG] SoundI::release                          :  (000002217DB37BB8)
-[LOG] SoundI::release                          :     Select Wire (00000221824189C8)
-[LOG] SoundI::release                          :  (000002217DB36A78)
-[LOG] SoundI::release                          :     Game Complete (000002218241EB48)
-[LOG] SoundI::release                          :  (0000022179D4CEF8)
-[LOG] SoundI::release                          :     Box Push  (0000022174685B08)
-[LOG] SoundI::release                          :  (000002217DB37D28)
-[LOG] SoundI::release                          :     Remote Control (0000022174684448)
-[LOG] SoundI::release                          :  (000002217DB37488)
-[LOG] SoundI::release                          :     Battery Low (00000221824244A8)
-[LOG] SoundI::release                          :  (000002217DB375F8)
-[LOG] SoundI::release                          :     Conveyor Belt (000002218241BA88)
-[LOG] SoundI::release                          :  (000002217DB36BE8)
-[LOG] SoundI::release                          :     Battery Nominal (0000022182422768)
-[LOG] SoundI::release                          :  (000002217DB361D8)
-[LOG] SoundI::release                          :     Pressure Plate Activae (000002218241F848)
-[LOG] SoundI::release                          :  (000002217DB37E98)
-[LOG] SoundI::release                          :     Robot Move (0000022182422288)
-[LOG] SoundI::release                          :  (000002217DB36EC8)
-[LOG] SoundI::release                          :     Ambience Loop (0000022182418B68)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.

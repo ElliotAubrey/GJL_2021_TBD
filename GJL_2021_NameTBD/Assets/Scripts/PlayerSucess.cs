@@ -6,7 +6,7 @@ public class PlayerSuccess : MonoBehaviour
 {
     [SerializeField] float successAdded;
     [SerializeField] float successRemoved;
-
+    [SerializeField] Music music;
     float sucessLevel = 0;
 
     public void PuzzleComplete()
@@ -17,5 +17,10 @@ public class PlayerSuccess : MonoBehaviour
     public void PuzzleFailed()
     {
         sucessLevel -= successRemoved;
+    }
+
+    private void FixedUpdate()
+    {
+        music.SucessLevel = sucessLevel;
     }
 }
