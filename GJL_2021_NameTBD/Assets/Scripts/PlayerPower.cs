@@ -12,16 +12,16 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] Gradient gradient;
     [SerializeField] Image fill;
     [SerializeField] Image batteryUI;
+    [SerializeField] Sprite emptyBattery;
     [SerializeField] TextMeshProUGUI lowPowerPrompt;
     [SerializeField] StudioEventEmitter lowPower;
     [SerializeField] StudioEventEmitter batteryChange;
-    [SerializeField] StudioEventEmitter batteryPickup;
 
     public int power = 100;
     public bool losePower = true;
     public bool needsReload = false;
 
-    bool spareBattery = false;
+    bool spareBattery = true;
     PlayerMovement playerMovement;
     int powerTimer = 50;
 
@@ -35,11 +35,6 @@ public class PlayerPower : MonoBehaviour
         bool x = false;
         if(!spareBattery)
         {
-            if(batteryPickup.enabled == true)
-            {
-                batteryPickup.enabled = false;
-            }
-            batteryPickup.enabled = true;
             spareBattery = true;
             x = true;
             losePower = true;

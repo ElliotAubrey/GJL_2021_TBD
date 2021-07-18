@@ -1,14 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
-using TMPro;
 
 public class PushBox : MonoBehaviour
 {
-    [SerializeField] StudioEventEmitter push;
-    [SerializeField] TextMeshProUGUI prompt;
-
     SpriteRenderer spriteRenderer;
     Rigidbody2D body;
     Vector2 startPos;
@@ -27,17 +22,11 @@ public class PushBox : MonoBehaviour
     {
         if(collision.gameObject.tag == "StrongBot")
         {
-            if(push.enabled == false)
-            {
-                push.enabled = true;
-            }
             body.mass = 1;
         }
         else
         {
             body.mass = 999999999;
-            prompt.enabled = true;
-            prompt.text = "[I wonder another bot could push this?]";
         }
     }
 
@@ -52,11 +41,6 @@ public class PushBox : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         body.velocity = Vector2.zero;
-        if (push.enabled == true)
-        {
-            push.enabled = false;
-        }
-        prompt.enabled = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

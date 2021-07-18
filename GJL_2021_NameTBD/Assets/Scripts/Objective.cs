@@ -7,7 +7,6 @@ public class Objective : MonoBehaviour
 {
     [SerializeField] Generator gen1, gen2, gen3;
     [SerializeField] TextMeshProUGUI objPrompt;
-    [SerializeField] Door finalDoor;
 
     int generatorCount = 0;
     bool g1, g2, g3;
@@ -20,10 +19,6 @@ public class Objective : MonoBehaviour
         else
         {
             objPrompt.text = "Turn on generators " + generatorCount + "/3";
-            if (finalDoor.open == false)
-            {
-                finalDoor.Open();
-            }
         }
     }
 

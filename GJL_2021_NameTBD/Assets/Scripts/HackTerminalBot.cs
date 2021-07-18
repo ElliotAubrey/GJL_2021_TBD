@@ -10,15 +10,12 @@ public class HackTerminalBot : MonoBehaviour
     [SerializeField] CinemachineTargetGroup target;
     [SerializeField] GameObject hackPuzzle = null;
     [SerializeField] Hackbot hackBot;
-    [SerializeField] GameObject hackingOverlayIn, hackingOverlayOut;
 
     bool complete = false;
     bool objectiveComplete;
     PlayerMovement playerMovement;
     PlayerPower playerPower;
     GameObject puzzle = null;
-    IEnumerator fade;
-    bool once;
 
     private void Start()
     {
@@ -74,8 +71,6 @@ public class HackTerminalBot : MonoBehaviour
 
     public void Send()
     {
-        fade = HackingOverlay(1);
-        StartCoroutine(fade);
         for (int i = 0; i < target.m_Targets.Length; i++)
         {
             target.m_Targets[i].weight = 0;
@@ -91,9 +86,6 @@ public class HackTerminalBot : MonoBehaviour
 
     public void Return(bool isComplete)
     {
-        once = false;
-        fade = HackingOverlay(0);
-        StartCoroutine(fade);
         for (int i = 0; i < target.m_Targets.Length; i++)
         {
             target.m_Targets[i].weight = 0;
@@ -111,42 +103,6 @@ public class HackTerminalBot : MonoBehaviour
         objectiveComplete = isComplete;
         playerMovement.canControl = true;
         playerPower.losePower = true;
-    }
-
-    IEnumerator HackingOverlay(int type)
-    {
-        if (once == false)
-        {
-            switch (type)
-            {
-                case 0:
-                    hackingOverlayOut.SetActive(true);
-                    hackingOverlayOut.GetComponent<Animator>().SetInteger("Fade", 1);
-                    break;
-                case 1:
-                    once = true;
-                    hackingOverlayIn.SetActive(true);
-                    hackingOverlayIn.GetComponent<Animator>().SetInteger("Fade", 1);
-                    break;
-            }
-            yield return new WaitForSeconds(2f);
-            hackingOverlayOut.GetComponent<Animator>().SetInteger("Fade", 0);
-            hackingOverlayIn.GetComponent<Animator>().SetInteger("Fade", 0);
-            switch (type)
-            {
-                case 0:
-                    hackingOverlayOut.GetComponent<Animator>().SetInteger("Fade", -1);
-                    break;
-                case 1:
-                    hackingOverlayIn.GetComponent<Animator>().SetInteger("Fade", -1);
-                    break;
-            }
-            yield return new WaitForSeconds(1f);
-            hackingOverlayOut.SetActive(false);
-            hackingOverlayIn.SetActive(false);
-            hackingOverlayOut.GetComponent<Animator>().SetInteger("Fade", 0);
-            hackingOverlayIn.GetComponent<Animator>().SetInteger("Fade", 0);
-        }
     }
 }
 

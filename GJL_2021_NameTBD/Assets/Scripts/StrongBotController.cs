@@ -11,8 +11,6 @@ public class StrongBotController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer rend;
     [SerializeField] StudioListener listener;
-    [SerializeField] StudioEventEmitter voice;
-    [SerializeField] StudioEventEmitter moveSound;
 
     public bool onBelt = false;
     public bool canControl = false;
@@ -37,11 +35,6 @@ public class StrongBotController : MonoBehaviour
         if (canControl && listener.attenuationObject != gameObject)
         {
             listener.attenuationObject = gameObject;
-            if(voice.enabled == true)
-            {
-                voice.enabled = false;
-            }
-            voice.enabled = true;
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -82,23 +75,6 @@ public class StrongBotController : MonoBehaviour
             previousInput = new Vector2(horizontal, vertical);
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
             body.velocity = movement;
-
-            if (movement != Vector2.zero && !moveSound.isActiveAndEnabled && !onBelt)
-            {
-                moveSound.enabled = true;
-            }
-            if (movement == Vector2.zero && moveSound.isActiveAndEnabled)
-            {
-                moveSound.enabled = false;
-            }
-            if (onBelt)
-            {
-                moveSound.enabled = false;
-            }
-            if (!canControl)
-            {
-                moveSound.enabled = false;
-            }
 
             SwitchAnimation(new Vector2(horizontal, vertical));
         }

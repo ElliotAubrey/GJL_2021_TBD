@@ -5,12 +5,6 @@ TextureImporter:
   - first:
       213: -5984506714778414995
     second: Robo_Statues_0
-  - first:
-      213: 4231805812116446465
-    second: Robo_Statues_1
-  - first:
-      213: -2101361935346234576
-    second: Robo_Statues_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,7 +138,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,48 +146,6 @@ TextureImporter:
       bones: []
       spriteID: d6051b5a9d2c2fca0800000000000000
       internalID: -5984506714778414995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Robo_Statues_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 224
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10d52ad07f46aba30800000000000000
-      internalID: 4231805812116446465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Robo_Statues_2
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 128
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03b092b047676d2e0800000000000000
-      internalID: -2101361935346234576
       vertices: []
       indices: 
       edges: []
