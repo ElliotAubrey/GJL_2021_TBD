@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] StudioEventEmitter openSound;
 
+    public bool open = false;
+
     public void Start()
     {
         animator = GetComponent<Animator>();
@@ -21,6 +23,7 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
+        open = true;
         myCollider.enabled = false;
         animator.SetBool("Open", true);
         openSound.enabled = true;
@@ -28,6 +31,7 @@ public class Door : MonoBehaviour
 
     public void Close()
     {
+        open = false;
         myCollider.enabled = true;
         animator.SetBool("Open", false);
         openSound.enabled = false;

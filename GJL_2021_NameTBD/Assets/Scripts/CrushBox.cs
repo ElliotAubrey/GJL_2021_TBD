@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class CrushBox : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI prompt;
+    [SerializeField] StudioEventEmitter smash;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "CrushBot")
@@ -24,7 +26,8 @@ public class CrushBox : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) && collision.gameObject.tag == "CrushBot")
         {
-            Destroy(gameObject);
+            smash.enabled = true;
+            Destroy(gameObject, 1f);
         }
 
     }
@@ -33,4 +36,5 @@ public class CrushBox : MonoBehaviour
     {
         prompt.gameObject.SetActive(false);
     }
+
 }

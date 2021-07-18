@@ -49,7 +49,7 @@ public class StrongBotController : MonoBehaviour
         {
             hackTerminal.Return(false);
             canControl = false;
-            listener.attenuationObject = GetComponent<PlayerMovement>().gameObject;
+            listener.attenuationObject = FindObjectOfType<PlayerMovement>().gameObject;
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -116,5 +116,14 @@ public class StrongBotController : MonoBehaviour
         }
     }
 
-    
+    public void PurposeFulfilled()
+    {
+        hackTerminal.Return(true);
+        Destroy(gameObject);
+        canControl = false;
+        listener.attenuationObject = FindObjectOfType<PlayerMovement>().gameObject;
+    }
+
+
+
 }

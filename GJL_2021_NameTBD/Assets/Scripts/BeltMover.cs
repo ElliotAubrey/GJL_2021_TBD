@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class BeltMover : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI prompt;
     [SerializeField] ConveyorBelt[] belts;
+    [SerializeField] StudioEventEmitter flipped;
 
     [SerializeField] Sprite[] lever;
     [SerializeField] SpriteRenderer rend;
@@ -54,6 +56,11 @@ public class BeltMover : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) && cooldown == 0 && collision.gameObject.tag == "Player")
         {
+            if(flipped.enabled == true)
+            {
+                flipped.enabled = false;
+            }
+            flipped.enabled = true;
             on = !on;
             for(int i = 0; i < belts.Length; i++)
             {

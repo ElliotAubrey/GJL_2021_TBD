@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class Generator : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Generator : MonoBehaviour
     [SerializeField] GameObject core;
     [SerializeField] bool powerOn = false;
     [SerializeField] Objective objective;
-
+    [SerializeField] StudioEventEmitter online;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,6 +32,7 @@ public class Generator : MonoBehaviour
         {
             case true:
                 core.SetActive(true);
+                online.enabled = true;
                 break;
             case false:
                 core.SetActive(false);

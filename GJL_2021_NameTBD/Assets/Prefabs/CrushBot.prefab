@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2727262548814876308}
   - component: {fileID: 2727262548814876311}
   - component: {fileID: -8011004563603204153}
+  - component: {fileID: -956454304518770779}
   m_Layer: 0
   m_Name: CrushBot
   m_TagString: CrushBot
@@ -104,6 +105,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   rend: {fileID: 2727262548814876312}
   hackTerminal: {fileID: 0}
+  listener: {fileID: 0}
   onBelt: 0
   canControl: 0
   body: {fileID: 0}
@@ -189,3 +191,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-956454304518770779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2727262548814876314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e854092a0a3afe14f81a881e5fe4b922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
