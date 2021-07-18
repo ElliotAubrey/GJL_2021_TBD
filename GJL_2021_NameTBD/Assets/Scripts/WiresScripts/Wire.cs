@@ -21,7 +21,10 @@ public class Wire : MonoBehaviour
     {
         if (selected)
         {
-            wireHold.enabled = true;
+            if(wireHold.enabled == false)
+            {
+                wireHold.enabled = true;
+            }
             if(wirePickUp.enabled == true)
             {
                 wirePickUp.enabled = false;

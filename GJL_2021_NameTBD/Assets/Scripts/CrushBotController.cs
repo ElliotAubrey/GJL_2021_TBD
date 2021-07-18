@@ -13,6 +13,7 @@ public class CrushBotController : MonoBehaviour
     [SerializeField] StudioListener listener;
     [SerializeField] StudioEventEmitter voice;
     [SerializeField] StudioEventEmitter moveSound;
+    [SerializeField] StudioEventEmitter drillSound;
 
     public bool onBelt = false;
     public bool canControl = false;
@@ -100,6 +101,18 @@ public class CrushBotController : MonoBehaviour
             {
                 moveSound.enabled = false;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "CrushBox" && Input.GetKey(KeyCode.F))
+        {
+            if(drillSound.enabled == true)
+            {
+                drillSound.enabled = false;
+            }
+            drillSound.enabled = true;
         }
     }
 

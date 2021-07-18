@@ -33,4 +33,12 @@ public class PlayerSucess : MonoBehaviour
     {
         music.SucessLevel = sucessLevel;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "MusicReset")
+        {
+            sucessLevel = 0;
+        }
+    }
 }

@@ -29,4 +29,13 @@ public class Music : MonoBehaviour
         instance.setParameterByName("Success Level", SucessLevel);
         instance.setParameterByName("Power", Power);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "MusicReset")
+        {
+            Debug.Log("DESTROY MUSIC");
+            Destroy(gameObject);
+        }
+    }
 }

@@ -7,9 +7,11 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject main;
     [SerializeField] GameObject options;
+    [SerializeField] MusicMenu menuMusic;
     public void Play()
     {
         SceneManager.LoadScene("Main");
+        menuMusic.PlayGame();
     }
 
     public void Options()

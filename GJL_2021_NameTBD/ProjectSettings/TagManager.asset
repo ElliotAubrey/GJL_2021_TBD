@@ -11,6 +11,8 @@ TagManager:
   - PushBox
   - CrushBot
   - ReloadPoint
+  - MusicReset
+  - CrushBox
   layers:
   - Default
   - TransparentFX
