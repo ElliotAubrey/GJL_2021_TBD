@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using FMODUnity;
 
 public class DialogTrigger : MonoBehaviour
 {
@@ -12,13 +11,12 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField] Transform textBox;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] bool triggerOnce, final;
-    [SerializeField] StudioEventEmitter finalSound;
 
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] PlayerPower playerPower;
     [SerializeField] GameObject finalOverlay;
 
-    bool triggered, isPlaying;
+    bool triggered, isPlaying, done;
     int amountOfText;
 
     // Start is called before the first frame update
@@ -29,7 +27,7 @@ public class DialogTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && triggerOnce && !triggered || collision.tag == "StrongBot" && triggerOnce && !triggered)
+        if (collision.tag == "Player" && triggerOnce && !triggered && done == false|| collision.tag == "StrongBot" && triggerOnce && !triggered && done == false)
         {
             triggered = true;
         }
@@ -168,6 +166,14 @@ public class DialogTrigger : MonoBehaviour
             isPlaying = false;
             amountOfText = dialogSO.dialog.Length;
         }
+        else
+        {
+            Destroy(gameObject);
+            triggered = false;
+            isPlaying = false;
+            done = true;
+            amountOfText = dialogSO.dialog.Length;
+        }
 
         playerMovement.canControl = true;
         playerPower.losePower = true;
@@ -176,11 +182,6 @@ public class DialogTrigger : MonoBehaviour
     public void FinalMessage()
     {
         finalOverlay.SetActive(true);
-        if(finalSound.enabled == true)
-        {
-            finalSound.enabled = false;
-        }
-        finalSound.enabled = true;
     }
 
     public void GoToStartScene()
