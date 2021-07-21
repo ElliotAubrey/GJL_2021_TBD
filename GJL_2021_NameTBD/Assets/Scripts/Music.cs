@@ -38,4 +38,10 @@ public class Music : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Stop()
+    {
+        Debug.Log("Stop");
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }

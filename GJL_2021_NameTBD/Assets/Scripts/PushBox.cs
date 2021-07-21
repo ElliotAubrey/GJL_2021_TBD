@@ -14,7 +14,6 @@ public class PushBox : MonoBehaviour
     Vector2 startPos;
     bool set = false;
     public bool onBelt;
-    bool setOffBelt = false;
 
     private void Start()
     {
@@ -61,7 +60,7 @@ public class PushBox : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PressurePlate")
+        if (collision.gameObject.tag == "PressurePlate" && collision.GetComponent<PressurePlate>().powered == false)
         {
             set = true;
             transform.position = collision.gameObject.transform.position + new Vector3(0, 0.5f, 0);

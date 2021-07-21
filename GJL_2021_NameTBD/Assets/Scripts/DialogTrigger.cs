@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class DialogTrigger : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] bool triggerOnce, final;
 
+    [SerializeField] StudioEventEmitter playerMovementSound;
+    [SerializeField] Music music;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] PlayerPower playerPower;
     [SerializeField] GameObject finalOverlay;
+
 
     bool triggered, isPlaying, done;
     int amountOfText;
@@ -152,6 +156,7 @@ public class DialogTrigger : MonoBehaviour
         textBox.gameObject.SetActive(true);
         ReadDialog();
         playerMovement.canControl = false;
+        playerMovementSound.enabled = false;
         playerPower.losePower = false;
         playerMovement.body.velocity = Vector2.zero;
     }
@@ -182,6 +187,9 @@ public class DialogTrigger : MonoBehaviour
     public void FinalMessage()
     {
         finalOverlay.SetActive(true);
+        playerMovement.canControl = false;
+        playerMovement.body.velocity = Vector2.zero;
+        music.Stop();
     }
 
     public void GoToStartScene()

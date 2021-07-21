@@ -13,32 +13,19 @@ public class PlayerSucess : MonoBehaviour
 
     public void PuzzleComplete()
     {
-        sucessLevel += successAdded;
-        if(sucessLevel>3)
+        if(sucessLevel + successAdded < 3)
         {
-            sucessLevel = 3;
+            sucessLevel += successAdded;
+            music.SucessLevel = sucessLevel;
         }
     }
 
     public void PuzzleFailed()
     {
-        sucessLevel -= successRemoved;
-        if(sucessLevel<0)
+        if (sucessLevel - successRemoved > 0)
         {
-            sucessLevel = 0;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        music.SucessLevel = sucessLevel;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "MusicReset")
-        {
-            sucessLevel = 0;
+            sucessLevel -= successRemoved;
+            music.SucessLevel = sucessLevel;
         }
     }
 }

@@ -29,7 +29,6 @@ public class Objective : MonoBehaviour
 
     public void NewGen()
     {
-        Debug.Log("NewGen called");
         generatorCount++;
         if (!g3 && g2 && g1)
         {

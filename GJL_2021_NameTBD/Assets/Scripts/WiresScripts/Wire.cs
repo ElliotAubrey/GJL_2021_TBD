@@ -8,7 +8,6 @@ public class Wire : MonoBehaviour
     [SerializeField] WireStart wireStart;
     [SerializeField] StudioEventEmitter wirePickUp;
     [SerializeField] StudioEventEmitter wireDrop;
-    [SerializeField] StudioEventEmitter wireHold;
     
 
     public LineRenderer lineRenderer;
@@ -21,10 +20,7 @@ public class Wire : MonoBehaviour
     {
         if (selected)
         {
-            if(wireHold.enabled == false)
-            {
-                wireHold.enabled = true;
-            }
+           
             if(wirePickUp.enabled == true)
             {
                 wirePickUp.enabled = false;
@@ -32,10 +28,6 @@ public class Wire : MonoBehaviour
             wirePickUp.enabled = true;
             lineRenderer.SetPosition(0, wireStart.transform.position);
             lineRenderer.SetPosition(1, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        }
-        else
-        {
-            wireHold.enabled = false;
         }
         
 

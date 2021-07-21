@@ -10,7 +10,7 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] Door[] doors;
     [SerializeField] StudioEventEmitter activated;
 
-    bool powered = false;
+    public bool powered = false;
 
     private void Start()
     {
@@ -19,9 +19,10 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PushBox")
+        if (collision.gameObject.tag == "PushBox" && !powered)
         {
-            if(activated.enabled == true)
+            PowerOnDelay();
+            if (activated.enabled == true)
             {
                 activated.enabled = false;
             }
@@ -35,6 +36,13 @@ public class PressurePlate : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator PowerOnDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        powered = true;
+        Debug.Log("Powered");
     }
 
 

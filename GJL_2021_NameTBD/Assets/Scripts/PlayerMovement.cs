@@ -63,16 +63,12 @@ public class PlayerMovement : MonoBehaviour
             body.bodyType = RigidbodyType2D.Dynamic;
             previousInput = new Vector2(horizontal, vertical);
             Vector2 movement = new Vector2(horizontal, vertical).normalized * speed;
-
-            if(movement != Vector2.zero && !moveSound.isActiveAndEnabled && !onBelt)
+            body.velocity = movement;
+            if(body.velocity != Vector2.zero && moveSound.enabled == false)
             {
                 moveSound.enabled = true;
             }
-            if(movement == Vector2.zero && moveSound.isActiveAndEnabled)
-            {
-                moveSound.enabled = false;
-            }
-            if(onBelt)
+            else if(moveSound.enabled == true && body.velocity == Vector2.zero)
             {
                 moveSound.enabled = false;
             }
@@ -81,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
                 moveSound.enabled = false;
             }
 
-            body.velocity = movement;
             SwitchAnimation(new Vector2(horizontal, vertical));
         }
     }

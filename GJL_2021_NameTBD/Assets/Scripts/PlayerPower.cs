@@ -17,7 +17,9 @@ public class PlayerPower : MonoBehaviour
     [SerializeField] StudioEventEmitter batteryChange;
     [SerializeField] StudioEventEmitter batteryPickup;
     [SerializeField] StudioEventEmitter batteryRunOut;
+    [SerializeField] StudioEventEmitter playerMove;
     [SerializeField] Music music;
+   
 
     public int power = 100;
     public bool losePower = true;
@@ -59,6 +61,7 @@ public class PlayerPower : MonoBehaviour
         {
             playerMovement.canControl = false;
             playerMovement.body.velocity = Vector2.zero;
+            playerMove.enabled = false;
             if(batteryRunOut.enabled == true)
             {
                 batteryRunOut.enabled = false;
