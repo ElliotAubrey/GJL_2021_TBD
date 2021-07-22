@@ -35,7 +35,7 @@ public class PushBox : MonoBehaviour
         else if(collision.gameObject.tag != "ConveyorBelt")
         {
             body.mass = 999999999;
-            prompt.enabled = true;
+            prompt.gameObject.SetActive(true);
             if (collision.gameObject.tag == "Player")
             {
                 prompt.text = "[I wonder another bot could push this?]";
@@ -56,7 +56,7 @@ public class PushBox : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         body.velocity = Vector2.zero;
-        prompt.enabled = false;
+        prompt.gameObject.SetActive(false);
         push.enabled = false;
     }
 
