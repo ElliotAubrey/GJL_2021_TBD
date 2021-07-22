@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
+using FMODUnity;
 
 public class HackTerminalBot : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class HackTerminalBot : MonoBehaviour
     [SerializeField] GameObject hackPuzzle = null;
     [SerializeField] Hackbot hackBot;
     [SerializeField] GameObject hackingOverlayIn, hackingOverlayOut;
+    [SerializeField] StudioEventEmitter playerMove;
 
     bool complete = false;
     bool objectiveComplete;
@@ -48,6 +50,7 @@ public class HackTerminalBot : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.F) && !complete && playerMovement.canControl)
         {
+            playerMove.enabled = false;
             if (puzzle == null)
             {
                 GameObject x = Instantiate(hackPuzzle.gameObject);

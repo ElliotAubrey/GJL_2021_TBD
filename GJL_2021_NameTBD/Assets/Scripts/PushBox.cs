@@ -24,15 +24,15 @@ public class PushBox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "StrongBot")
+        if(collision.gameObject.tag == "StrongBot" || collision.gameObject.tag == "Conveyor")
         {
-            if(push.enabled == false)
+            if(collision.gameObject.tag == "StrongBot" && push.enabled == false)
             {
-                push.enabled = true;
+               push.enabled = true;
             }
             body.mass = 1;
         }
-        else
+        else if(collision.gameObject.tag != "ConveyorBelt")
         {
             body.mass = 999999999;
             prompt.enabled = true;
@@ -46,20 +46,18 @@ public class PushBox : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "StrongBot")
-        {
+       if(collision.gameObject.tag != "StrongBot" || collision.gameObject.tag != "Conveyor")
+       {
             body.velocity = Vector2.zero;
-        }
+            Debug.Log(collision.gameObject.name);
+       }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         body.velocity = Vector2.zero;
-        if (push.enabled == true)
-        {
-            push.enabled = false;
-        }
         prompt.enabled = false;
+        push.enabled = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
