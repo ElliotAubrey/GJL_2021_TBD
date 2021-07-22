@@ -7,7 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject main;
     [SerializeField] GameObject options;
+    [SerializeField] GameObject controls;
     [SerializeField] MusicMenu menuMusic;
+
     public void Play()
     {
         SceneManager.LoadScene("Main");
@@ -23,6 +25,7 @@ public class MainMenu : MonoBehaviour
     public void Back()
     {
         options.SetActive(false);
+        controls.SetActive(false);
         main.SetActive(true);
     }
 
@@ -30,5 +33,11 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("The game has closed");
         Application.Quit();
+    }
+
+    public void Controls()
+    {
+        controls.SetActive(true);
+        main.SetActive(false);
     }
 }

@@ -183,3 +183,5 @@ MonoBehaviour:
   doors:
   - {fileID: 0}
   activated: {fileID: 502109684520736647}
+  blockingHitbox: {fileID: 0}
+  powered: 0

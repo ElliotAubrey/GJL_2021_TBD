@@ -36,8 +36,12 @@ public class PushBox : MonoBehaviour
         {
             body.mass = 999999999;
             prompt.enabled = true;
-            prompt.text = "[I wonder another bot could push this?]";
+            if (collision.gameObject.tag == "Player")
+            {
+                prompt.text = "[I wonder another bot could push this?]";
+            }
         }
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -60,8 +64,9 @@ public class PushBox : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PressurePlate" && collision.GetComponent<PressurePlate>().powered == false)
+        if (collision.gameObject.tag == "PressurePlate" && collision.gameObject.GetComponent<PressurePlate>().GetPushBox().set == false)
         {
+            Debug.Log("IN");
             set = true;
             transform.position = collision.gameObject.transform.position + new Vector3(0, 0.5f, 0);
             body.bodyType = RigidbodyType2D.Static;

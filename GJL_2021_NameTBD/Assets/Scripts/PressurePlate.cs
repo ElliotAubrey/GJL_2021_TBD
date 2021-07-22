@@ -10,21 +10,22 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] Door[] doors;
     [SerializeField] StudioEventEmitter activated;
 
-    public bool powered = false;
+    PushBox myBox;
+    bool powered = false;
 
     private void Start()
     {
         rend = gameObject.GetComponent<SpriteRenderer>();
+        myBox = new PushBox();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PushBox" && !powered)
+        if (collision.gameObject.tag == "PushBox")
         {
-            PowerOnDelay();
-            if (activated.enabled == true)
+            if(myBox == null)
             {
-                activated.enabled = false;
+                myBox = collision.gameObject.GetComponent<PushBox>();
             }
             activated.enabled = true;
             rend.sprite = pressureOn;
@@ -38,11 +39,9 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
-    IEnumerator PowerOnDelay()
+    public PushBox GetPushBox()
     {
-        yield return new WaitForSeconds(1f);
-        powered = true;
-        Debug.Log("Powered");
+        return myBox;
     }
 
 
