@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
   - Start search...
+  - WASD to move. Left Shift to sprint.
+  - '[There are 3 generators in the vicinity.]'
   - 'Instructions: Repair vital generators.'
   - Loading instructions...

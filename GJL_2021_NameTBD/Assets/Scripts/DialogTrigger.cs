@@ -22,6 +22,8 @@ public class DialogTrigger : MonoBehaviour
 
     bool triggered, isPlaying, done;
     int amountOfText;
+    bool isPlayer;
+    GameObject currentStrongBot;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +33,27 @@ public class DialogTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && triggerOnce && !triggered && done == false|| collision.tag == "StrongBot" && triggerOnce && !triggered && done == false)
+        if (collision.tag == "Player" && triggerOnce && !triggered && done == false)
         {
             triggered = true;
+            isPlayer = true;
         }
-        else if (collision.tag == "Player" && !triggerOnce || collision.tag == "StrongBot" && !triggerOnce)
+        else if (collision.tag == "Player" && !triggerOnce)
         {
             triggered = true;
+            isPlayer = true;
+        }
+        else if (collision.tag == "StrongBot" && triggerOnce && !triggered && done == false)
+        {
+            triggered = true;
+            isPlayer = false;
+            currentStrongBot = collision.gameObject;
+        }
+        else if (collision.tag == "StrongBot" && !triggerOnce)
+        {
+            triggered = true;
+            isPlayer = false;
+            currentStrongBot = collision.gameObject;
         }
     }
 
@@ -155,10 +171,21 @@ public class DialogTrigger : MonoBehaviour
     {
         textBox.gameObject.SetActive(true);
         ReadDialog();
-        playerMovement.canControl = false;
-        playerMovementSound.enabled = false;
-        playerPower.losePower = false;
-        playerMovement.body.velocity = Vector2.zero;
+
+        if (isPlayer == true)
+        {
+            playerMovement.canControl = false;
+            playerMovementSound.enabled = false;
+            playerPower.losePower = false;
+            playerMovement.body.velocity = Vector2.zero;
+        }
+        else
+        {
+            StrongBotController strongBot = currentStrongBot.GetComponent<StrongBotController>();
+            strongBot.canControl = false;
+            playerPower.losePower = false;
+            strongBot.body.velocity = Vector2.zero;
+        }
     }
 
     public void CloseTextBox()
@@ -180,8 +207,17 @@ public class DialogTrigger : MonoBehaviour
             amountOfText = dialogSO.dialog.Length;
         }
 
-        playerMovement.canControl = true;
-        playerPower.losePower = true;
+        if (isPlayer == true)
+        {
+            playerMovement.canControl = true;
+            playerPower.losePower = true;
+        }
+        else
+        {
+            StrongBotController strongBot = currentStrongBot.GetComponent<StrongBotController>();
+            strongBot.canControl = true;
+            playerPower.losePower = true;
+        }
     }
 
     public void FinalMessage()

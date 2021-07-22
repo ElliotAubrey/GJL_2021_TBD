@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mailing Bot
   m_EditorClassIdentifier: 
   dialog:
-  - '[I am unable to reach this bot. ]'
+  - '[I am unable to reach this bot.]'
   - 'Conclusion: Unable to repair.'
   - Scanning for solution...
   - 'Status: Damaged.'

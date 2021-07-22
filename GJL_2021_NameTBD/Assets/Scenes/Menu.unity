@@ -498,7 +498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -38.59373}
+  m_AnchoredPosition: {x: 0, y: -19.500004}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &116455649
@@ -761,11 +761,11 @@ RectTransform:
   m_Children:
   - {fileID: 2096539910}
   m_Father: {fileID: 1820730333}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: -223.84373}
+  m_AnchoredPosition: {x: 0, y: -175.50002}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271833291
@@ -2688,11 +2688,11 @@ RectTransform:
   m_Children:
   - {fileID: 1715419398}
   m_Father: {fileID: 1820730333}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -223.84373}
+  m_AnchoredPosition: {x: 0, y: -253.50002}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1098452408
@@ -3670,7 +3670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -126.343735}
+  m_AnchoredPosition: {x: 0, y: -97.500015}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585172150
@@ -4264,8 +4264,8 @@ RectTransform:
   - {fileID: 1092309804}
   - {fileID: 116455648}
   - {fileID: 1585172149}
-  - {fileID: 1098452407}
   - {fileID: 271833290}
+  - {fileID: 1098452407}
   m_Father: {fileID: 1749815380}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4923,8 +4923,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294443262
-  m_fontColor: {r: 0.9960785, g: 0, b: 0.9725491, a: 1}
+    rgba: 4278209534
+  m_fontColor: {r: 0.99607843, g: 0.2945849, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
