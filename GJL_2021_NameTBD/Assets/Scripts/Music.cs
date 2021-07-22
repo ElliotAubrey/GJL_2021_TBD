@@ -30,18 +30,11 @@ public class Music : MonoBehaviour
         instance.setParameterByName("Power", Power);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "MusicReset")
-        {
-            Debug.Log("DESTROY MUSIC");
-            Destroy(gameObject);
-        }
-    }
 
     public void Stop()
     {
         Debug.Log("Stop");
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
+
 }

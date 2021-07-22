@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using TMPro;
+using FMODUnity;
 
 public class HackTerminalDoor : MonoBehaviour
 { 
@@ -11,6 +12,8 @@ public class HackTerminalDoor : MonoBehaviour
     [SerializeField] Door[] doors;
     [SerializeField] SpriteRenderer rend;
     [SerializeField] Sprite completed;
+    [SerializeField] StudioEventEmitter playerMove;
+
 
     bool complete = false;
     PlayerMovement playerMovement;
@@ -46,6 +49,7 @@ public class HackTerminalDoor : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) && !complete && playerMovement.canControl)
         {
+            playerMove.enabled = false;
             if (puzzle == null)
             {
                 GameObject x = Instantiate(hackPuzzle.gameObject);
