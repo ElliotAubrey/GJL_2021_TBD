@@ -129,7 +129,7 @@ public class PlayerPower : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         {
-            Debug.Log("Loaded");
+            music.Stop();
             SceneManager.LoadScene("Menu");
         }
     }
